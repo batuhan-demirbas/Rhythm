@@ -9,21 +9,42 @@
 /* Begin PBXBuildFile section */
 		D5DD58372A0908980058BA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58362A0908980058BA23 /* AppDelegate.swift */; };
 		D5DD58392A0908980058BA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58382A0908980058BA23 /* SceneDelegate.swift */; };
-		D5DD583B2A0908980058BA23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD583A2A0908980058BA23 /* ViewController.swift */; };
 		D5DD583E2A0908980058BA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DD583C2A0908980058BA23 /* Main.storyboard */; };
 		D5DD58402A09089A0058BA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5DD583F2A09089A0058BA23 /* Assets.xcassets */; };
 		D5DD58432A09089A0058BA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DD58412A09089A0058BA23 /* LaunchScreen.storyboard */; };
+		D5DD58532A090BB30058BA23 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D5DD58522A090BB30058BA23 /* Alamofire */; };
+		D5DD58562A090BC70058BA23 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D5DD58552A090BC70058BA23 /* Kingfisher */; };
+		D5DD58592A090C020058BA23 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = D5DD58582A090C020058BA23 /* SkeletonView */; };
+		D5DD58602A091A010058BA23 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD585F2A091A010058BA23 /* HomeViewController.swift */; };
+		D5DD58622A091A1B0058BA23 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58612A091A1B0058BA23 /* HomeViewModel.swift */; };
+		D5DD58642A09231E0058BA23 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58632A09231E0058BA23 /* CategoryViewController.swift */; };
+		D5DD58662A09233B0058BA23 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58652A09233B0058BA23 /* CategoryViewModel.swift */; };
+		D5DD58692A0923990058BA23 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58682A0923990058BA23 /* ArtistViewController.swift */; };
+		D5DD586B2A0923B10058BA23 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD586A2A0923B10058BA23 /* ArtistViewModel.swift */; };
+		D5DD586D2A0923F10058BA23 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD586C2A0923F10058BA23 /* AlbumViewController.swift */; };
+		D5DD586F2A0924090058BA23 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD586E2A0924090058BA23 /* AlbumViewModel.swift */; };
+		D5DD58712A09242D0058BA23 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58702A09242D0058BA23 /* FavoriteViewController.swift */; };
+		D5DD58732A0924470058BA23 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58722A0924470058BA23 /* FavoriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D5DD58332A0908980058BA23 /* Rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DD58362A0908980058BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5DD58382A0908980058BA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5DD583A2A0908980058BA23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5DD583D2A0908980058BA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5DD583F2A09089A0058BA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5DD58422A09089A0058BA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5DD58442A09089A0058BA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DD585F2A091A010058BA23 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D5DD58612A091A1B0058BA23 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D5DD58632A09231E0058BA23 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		D5DD58652A09233B0058BA23 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		D5DD58682A0923990058BA23 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		D5DD586A2A0923B10058BA23 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
+		D5DD586C2A0923F10058BA23 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		D5DD586E2A0924090058BA23 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		D5DD58702A09242D0058BA23 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		D5DD58722A0924470058BA23 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DD58562A090BC70058BA23 /* Kingfisher in Frameworks */,
+				D5DD58592A090C020058BA23 /* SkeletonView in Frameworks */,
+				D5DD58532A090BB30058BA23 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +80,11 @@
 		D5DD58352A0908980058BA23 /* Rhythm */ = {
 			isa = PBXGroup;
 			children = (
-				D5DD584F2A090A2A0058BA23 /* Resource */,
-				D5DD584E2A090A210058BA23 /* View */,
 				D5DD584D2A090A0B0058BA23 /* Helper */,
-				D5DD584C2A0909FB0058BA23 /* Scene */,
-				D5DD584B2A0909ED0058BA23 /* Model */,
 				D5DD584A2A0909DD0058BA23 /* Network */,
+				D5DD584B2A0909ED0058BA23 /* Model */,
+				D5DD584C2A0909FB0058BA23 /* Scene */,
+				D5DD584F2A090A2A0058BA23 /* Resource */,
 				D5DD58362A0908980058BA23 /* AppDelegate.swift */,
 				D5DD58382A0908980058BA23 /* SceneDelegate.swift */,
 				D5DD583C2A0908980058BA23 /* Main.storyboard */,
@@ -88,7 +111,11 @@
 		D5DD584C2A0909FB0058BA23 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				D5DD583A2A0908980058BA23 /* ViewController.swift */,
+				D5DD585A2A0918B20058BA23 /* Home */,
+				D5DD585C2A0918D60058BA23 /* Category */,
+				D5DD585D2A0918F30058BA23 /* Artist */,
+				D5DD585E2A0919090058BA23 /* Album */,
+				D5DD585B2A0918B60058BA23 /* Favorite */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -96,6 +123,8 @@
 		D5DD584D2A090A0B0058BA23 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D5DD58502A090B340058BA23 /* Extension */,
+				D5DD584E2A090A210058BA23 /* View */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -115,6 +144,98 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		D5DD58502A090B340058BA23 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D5DD585A2A0918B20058BA23 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D5DD58672A0923460058BA23 /* Cell */,
+				D5DD585F2A091A010058BA23 /* HomeViewController.swift */,
+				D5DD58612A091A1B0058BA23 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D5DD585B2A0918B60058BA23 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				D5DD58772A0925740058BA23 /* Cell */,
+				D5DD58702A09242D0058BA23 /* FavoriteViewController.swift */,
+				D5DD58722A0924470058BA23 /* FavoriteViewModel.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		D5DD585C2A0918D60058BA23 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D5DD58742A0925540058BA23 /* Cell */,
+				D5DD58632A09231E0058BA23 /* CategoryViewController.swift */,
+				D5DD58652A09233B0058BA23 /* CategoryViewModel.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D5DD585D2A0918F30058BA23 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				D5DD58752A0925620058BA23 /* Cell */,
+				D5DD58682A0923990058BA23 /* ArtistViewController.swift */,
+				D5DD586A2A0923B10058BA23 /* ArtistViewModel.swift */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		D5DD585E2A0919090058BA23 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				D5DD58762A09256A0058BA23 /* Cell */,
+				D5DD586C2A0923F10058BA23 /* AlbumViewController.swift */,
+				D5DD586E2A0924090058BA23 /* AlbumViewModel.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		D5DD58672A0923460058BA23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D5DD58742A0925540058BA23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D5DD58752A0925620058BA23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D5DD58762A09256A0058BA23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D5DD58772A0925740058BA23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,6 +252,11 @@
 			dependencies = (
 			);
 			name = Rhythm;
+			packageProductDependencies = (
+				D5DD58522A090BB30058BA23 /* Alamofire */,
+				D5DD58552A090BC70058BA23 /* Kingfisher */,
+				D5DD58582A090C020058BA23 /* SkeletonView */,
+			);
 			productName = Rhythm;
 			productReference = D5DD58332A0908980058BA23 /* Rhythm.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +285,11 @@
 				Base,
 			);
 			mainGroup = D5DD582A2A0908980058BA23;
+			packageReferences = (
+				D5DD58512A090BB30058BA23 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D5DD58542A090BC70058BA23 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D5DD58572A090C020058BA23 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+			);
 			productRefGroup = D5DD58342A0908980058BA23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -186,9 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5DD583B2A0908980058BA23 /* ViewController.swift in Sources */,
+				D5DD586B2A0923B10058BA23 /* ArtistViewModel.swift in Sources */,
+				D5DD58662A09233B0058BA23 /* CategoryViewModel.swift in Sources */,
 				D5DD58372A0908980058BA23 /* AppDelegate.swift in Sources */,
+				D5DD58692A0923990058BA23 /* ArtistViewController.swift in Sources */,
 				D5DD58392A0908980058BA23 /* SceneDelegate.swift in Sources */,
+				D5DD586D2A0923F10058BA23 /* AlbumViewController.swift in Sources */,
+				D5DD58622A091A1B0058BA23 /* HomeViewModel.swift in Sources */,
+				D5DD58642A09231E0058BA23 /* CategoryViewController.swift in Sources */,
+				D5DD586F2A0924090058BA23 /* AlbumViewModel.swift in Sources */,
+				D5DD58712A09242D0058BA23 /* FavoriteViewController.swift in Sources */,
+				D5DD58602A091A010058BA23 /* HomeViewController.swift in Sources */,
+				D5DD58732A0924470058BA23 /* FavoriteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +552,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D5DD58512A090BB30058BA23 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D5DD58542A090BC70058BA23 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		D5DD58572A090C020058BA23 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D5DD58522A090BB30058BA23 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5DD58512A090BB30058BA23 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D5DD58552A090BC70058BA23 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5DD58542A090BC70058BA23 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		D5DD58582A090C020058BA23 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5DD58572A090C020058BA23 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D5DD582B2A0908980058BA23 /* Project object */;
 }
