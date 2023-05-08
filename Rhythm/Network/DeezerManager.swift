@@ -9,6 +9,10 @@ import Foundation
 
 protocol DeezerManagerProtocol {
     func getGenres(complete: @escaping((Genre?, Error?)->()))
+    func getArtists(genreId: Int, complete: @escaping((Artists?, Error?)->()))
+    func getArtist(artistId: Int, complete: @escaping((Artist?, Error?)->()))
+    func getArtistAlbums(artistId: Int, complete: @escaping((Albums?, Error?)->()))
+    func getAlbum(albumId: Int, complete: @escaping((Album?, Error?)->()))
 }
 
 class DeezerManager: DeezerManagerProtocol {
@@ -25,9 +29,8 @@ class DeezerManager: DeezerManagerProtocol {
         }
     }
     
-    /*
-    func getLocation(page: String, complete: @escaping((Location?, Error?)->())) {
-        NetworkManager.shared.request(type: Location.self, url: HomeEndpoint.location.path + "?page=\(page)", method: .get) { response in
+    func getArtists(genreId: Int, complete: @escaping ((Artists?, Error?) -> ())) {
+        NetworkManager.shared.request(type: Artists.self, url: DeezerEndpoint.genre.path + String(genreId) + "/artists", method: .get) { response in
             switch response {
             case .success(let data):
                 complete(data, nil)
@@ -37,9 +40,8 @@ class DeezerManager: DeezerManagerProtocol {
         }
     }
     
-    func getMultipleCharacters(ids: [String], complete: @escaping(([Character]?, Error?)->())) {
-        let joinedIds = ids.joined(separator: ",")
-        NetworkManager.shared.request(type: [Character].self, url: HomeEndpoint.character.path + "/\(joinedIds),", method: .get) { response in
+    func getArtist(artistId: Int, complete: @escaping ((Artist?, Error?) -> ())) {
+        NetworkManager.shared.request(type: Artist.self, url: DeezerEndpoint.artist.path + String(artistId), method: .get) { response in
             switch response {
             case .success(let data):
                 complete(data, nil)
@@ -48,6 +50,28 @@ class DeezerManager: DeezerManagerProtocol {
             }
         }
     }
-     */
+    
+    func getArtistAlbums(artistId: Int, complete: @escaping ((Albums?, Error?) -> ())) {
+        NetworkManager.shared.request(type: Albums.self, url: DeezerEndpoint.artist.path + String(artistId) + "/albums", method: .get) { response in
+            switch response {
+            case .success(let data):
+                complete(data, nil)
+            case.failure(let error):
+                complete(nil, error)
+            }
+        }
+    }
+    
+    func getAlbum(albumId: Int, complete: @escaping ((Album?, Error?) -> ())) {
+        NetworkManager.shared.request(type: Album.self, url: DeezerEndpoint.album.path + String(albumId), method: .get) { response in
+            switch response {
+            case .success(let data):
+                complete(data, nil)
+            case.failure(let error):
+                complete(nil, error)
+            }
+        }
+    }
+    
 }
 
