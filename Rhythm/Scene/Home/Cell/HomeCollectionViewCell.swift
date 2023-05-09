@@ -8,13 +8,13 @@
 import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var view: UIView!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet var view: UIView!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var label: UILabel!
 
     static let reuseIdentifier: String = "HomeCollectionViewCell"
-    
+    var genre: GenreDatum?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,4 +23,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
         imageView.addLinearGradient()
     }
 
+    func configure() {
+        guard let genre = genre else { return }
+        imageView.loadImage(from: genre.pictureBig)
+        label.text = genre.name
+    }
 }

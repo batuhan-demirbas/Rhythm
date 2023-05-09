@@ -7,26 +7,48 @@
 
 import Foundation
 
-class HomeViewModel {
+protocol HomeViewModelDelegate: AnyObject {
+    func prepareCollectionView()
+    func reloadData()
+}
+
+protocol HomeViewModelProtocol {
+    var delegate: HomeViewModelDelegate? { get set }
+    var numberOfItems: Int { get }
+    var genres: [GenreDatum] { get }
+    func load()
+}
+
+final class HomeViewModel {
     let manager = DeezerManager.shared
-    
-    var genre: Genre?
-    
+    weak var delegate: HomeViewModelDelegate?
+    var genres: [GenreDatum] = []
+
     var isLoading: Bool = false
-    var errorCallback: ((String)->())?
-    var successCallback: (()->())?
-    
-    func getGenre() {
-        manager.getGenres() { [weak self] genre, error in
-            guard let genre = genre else { return }
+    var errorCallback: ((String) -> Void)?
+    var successCallback: (() -> Void)?
+
+    func fetchGenres() {
+        manager.getGenres { [weak self] result, error in
+            guard let result = result else { return }
             if let error = error {
                 self?.errorCallback?(error.localizedDescription)
             } else {
-                self?.genre = genre
+                self?.genres = result.data
+                self?.delegate?.reloadData()
                 self?.successCallback?()
             }
-            
         }
     }
-    
+}
+
+extension HomeViewModel: HomeViewModelProtocol {
+    var numberOfItems: Int {
+        genres.count
+    }
+
+    func load() {
+        delegate?.prepareCollectionView()
+        fetchGenres()
+    }
 }
