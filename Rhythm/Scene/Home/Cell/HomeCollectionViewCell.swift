@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet var view: UIView!
@@ -21,11 +22,13 @@ class HomeCollectionViewCell: UICollectionViewCell {
         imageView.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
         imageView.layer.borderWidth = 1
         imageView.addLinearGradient()
+        
     }
 
     func configure() {
         guard let genre = genre else { return }
         imageView.loadImage(from: genre.pictureBig)
         label.text = genre.name
+        
     }
 }

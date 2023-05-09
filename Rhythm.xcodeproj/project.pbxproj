@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51034672A0AA2A200C1A624 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51034662A0AA2A200C1A624 /* TabBar.swift */; };
 		D530468D2A0A59980007662C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530468B2A0A59980007662C /* HomeCollectionViewCell.swift */; };
 		D530468E2A0A59980007662C /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D530468C2A0A59980007662C /* HomeCollectionViewCell.xib */; };
 		D53046922A0A5ABE0007662C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53046912A0A5ABE0007662C /* Color.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D51034662A0AA2A200C1A624 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		D530468B2A0A59980007662C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		D530468C2A0A59980007662C /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		D53046912A0A5ABE0007662C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				D53046A62A0A6F5C0007662C /* SearchField.swift */,
+				D51034662A0AA2A200C1A624 /* TabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				D5DD58392A0908980058BA23 /* SceneDelegate.swift in Sources */,
 				D53046A72A0A6F5C0007662C /* SearchField.swift in Sources */,
 				D5DD586D2A0923F10058BA23 /* AlbumViewController.swift in Sources */,
+				D51034672A0AA2A200C1A624 /* TabBar.swift in Sources */,
 				D5DD58622A091A1B0058BA23 /* HomeViewModel.swift in Sources */,
 				D5DD58802A0928550058BA23 /* DeezerManager.swift in Sources */,
 				D5DD58642A09231E0058BA23 /* CategoryViewController.swift in Sources */,

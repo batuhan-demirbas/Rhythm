@@ -17,7 +17,7 @@ extension UIImageView {
         ]
         gradientLayer.locations = [0.0, 1.0]
         let screenWidth = UIScreen.main.bounds.width
-        let width = screenWidth - 48 - 16 / 2
+        let width = (screenWidth - 48 - 16) / 2
         let height = width
         gradientLayer.frame = CGRect(x: 0, y: 0, width: width, height: height)
         layer.addSublayer(gradientLayer)

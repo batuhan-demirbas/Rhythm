@@ -28,8 +28,8 @@
                         <viewLayoutGuide key="safeArea" id="sC9-ci-MF0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="QID-Gr-or1">
-                        <imageReference key="image" image="star" catalog="system" symbolScale="default" variableValue="1"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="favorites.fill" id="QID-Gr-or1">
+                        <imageReference key="image" image="favorites" symbolScale="default" variableValue="1"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcn-FN-C8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -118,8 +118,8 @@
                             <constraint firstItem="OZ4-HK-uXo" firstAttribute="trailing" secondItem="llQ-Lm-5ju" secondAttribute="trailing" id="u30-We-Enu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="nDV-4w-qGe">
-                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="default"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="home.fill" id="nDV-4w-qGe">
+                        <imageReference key="image" image="home" symbolScale="default"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="OZ4-HK-uXo" id="oL4-O6-qnv"/>
@@ -194,10 +194,11 @@
         <scene sceneID="cXF-Yx-1e1">
             <objects>
                 <tabBarController id="uQy-jB-Wkc" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZTt-kp-5D7">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZTt-kp-5D7" customClass="TabBar" customModule="Rhythm" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="background"/>
+                        <color key="tintColor" name="main.primary"/>
                         <color key="selectedImageTintColor" name="main.primary"/>
                     </tabBar>
                     <connections>
@@ -217,8 +218,10 @@
     </designables>
     <resources>
         <image name="background.home" width="110" height="110"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="favorites" width="32" height="32"/>
+        <image name="favorites.fill" width="32" height="32"/>
+        <image name="home" width="32" height="32"/>
+        <image name="home.fill" width="32" height="32"/>
         <namedColor name="background">
             <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
