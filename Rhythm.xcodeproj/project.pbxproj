@@ -15,6 +15,7 @@
 		D53046A52A0A68CB0007662C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A42A0A68CB0007662C /* UIImageView+Extension.swift */; };
 		D53046A72A0A6F5C0007662C /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A62A0A6F5C0007662C /* SearchField.swift */; };
 		D53046A92A0A7BF60007662C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */; };
+		D53046AB2A0A87970007662C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046AA2A0A87970007662C /* UILabel+Extension.swift */; };
 		D5DD58372A0908980058BA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58362A0908980058BA23 /* AppDelegate.swift */; };
 		D5DD58392A0908980058BA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58382A0908980058BA23 /* SceneDelegate.swift */; };
 		D5DD583E2A0908980058BA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DD583C2A0908980058BA23 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		D53046A42A0A68CB0007662C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		D53046A62A0A6F5C0007662C /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
 		D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D53046AA2A0A87970007662C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		D5DD58332A0908980058BA23 /* Rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DD58362A0908980058BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5DD58382A0908980058BA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				D53046A22A0A5E540007662C /* UINib+Extension.swift */,
 				D53046A42A0A68CB0007662C /* UIImageView+Extension.swift */,
 				D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */,
+				D53046AA2A0A87970007662C /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				D5DD58712A09242D0058BA23 /* FavoriteViewController.swift in Sources */,
 				D5DD587E2A09277A0058BA23 /* DeezerHelper.swift in Sources */,
 				D5DD58602A091A010058BA23 /* HomeViewController.swift in Sources */,
+				D53046AB2A0A87970007662C /* UILabel+Extension.swift in Sources */,
 				D5DD58732A0924470058BA23 /* FavoriteViewModel.swift in Sources */,
 				D5DD588D2A0989D60058BA23 /* SplashViewController.swift in Sources */,
 				D53046A32A0A5E540007662C /* UINib+Extension.swift in Sources */,
@@ -597,8 +601,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,8 +634,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
