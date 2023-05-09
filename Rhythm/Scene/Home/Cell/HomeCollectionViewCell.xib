@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Regular.otf">
+            <string>Satoshi-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="Rhythm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zkE-mG-BBH">
+                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoR-3Y-82x">
+                        <rect key="frame" x="16.000000000000004" y="121.33333333333333" width="33.333333333333343" height="17.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Satoshi-Regular" family="Satoshi" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="zkE-mG-BBH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="78w-O7-wX7"/>
+                <constraint firstItem="WoR-3Y-82x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="8pQ-C4-JvP"/>
+                <constraint firstAttribute="bottom" secondItem="WoR-3Y-82x" secondAttribute="bottom" constant="16" id="9Rc-o8-f3m"/>
+                <constraint firstAttribute="bottom" secondItem="zkE-mG-BBH" secondAttribute="bottom" id="elh-9G-B6i"/>
+                <constraint firstItem="zkE-mG-BBH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hVR-3z-Gd7"/>
+                <constraint firstAttribute="trailing" secondItem="zkE-mG-BBH" secondAttribute="trailing" id="xT9-oI-CKg"/>
+            </constraints>
+            <size key="customSize" width="241" height="264"/>
+            <point key="canvasLocation" x="275.57251908396944" y="64.08450704225352"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="kingfisher-3.jpg" width="250" height="250"/>
+    </resources>
+</document>

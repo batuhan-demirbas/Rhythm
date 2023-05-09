@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D530468D2A0A59980007662C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530468B2A0A59980007662C /* HomeCollectionViewCell.swift */; };
+		D530468E2A0A59980007662C /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D530468C2A0A59980007662C /* HomeCollectionViewCell.xib */; };
+		D53046922A0A5ABE0007662C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53046912A0A5ABE0007662C /* Color.xcassets */; };
+		D53046942A0A5AEF0007662C /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53046932A0A5AEF0007662C /* Icon.xcassets */; };
+		D53046A32A0A5E540007662C /* UINib+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A22A0A5E540007662C /* UINib+Extension.swift */; };
+		D53046A52A0A68CB0007662C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A42A0A68CB0007662C /* UIImageView+Extension.swift */; };
+		D53046A72A0A6F5C0007662C /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A62A0A6F5C0007662C /* SearchField.swift */; };
+		D53046A92A0A7BF60007662C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */; };
 		D5DD58372A0908980058BA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58362A0908980058BA23 /* AppDelegate.swift */; };
 		D5DD58392A0908980058BA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58382A0908980058BA23 /* SceneDelegate.swift */; };
 		D5DD583E2A0908980058BA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DD583C2A0908980058BA23 /* Main.storyboard */; };
@@ -29,14 +37,33 @@
 		D5DD587C2A0927410058BA23 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD587B2A0927410058BA23 /* NetworkManager.swift */; };
 		D5DD587E2A09277A0058BA23 /* DeezerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD587D2A09277A0058BA23 /* DeezerHelper.swift */; };
 		D5DD58802A0928550058BA23 /* DeezerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD587F2A0928550058BA23 /* DeezerManager.swift */; };
-		D5DD58822A0928C00058BA23 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58812A0928C00058BA23 /* Genre.swift */; };
+		D5DD58822A0928C00058BA23 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58812A0928C00058BA23 /* Genres.swift */; };
 		D5DD58842A092D9E0058BA23 /* Artists.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58832A092D9E0058BA23 /* Artists.swift */; };
 		D5DD58862A092E530058BA23 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58852A092E530058BA23 /* Artist.swift */; };
 		D5DD58882A092E8F0058BA23 /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58872A092E8F0058BA23 /* Albums.swift */; };
 		D5DD588A2A092EB80058BA23 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58892A092EB80058BA23 /* Album.swift */; };
+		D5DD588D2A0989D60058BA23 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD588C2A0989D60058BA23 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D530468B2A0A59980007662C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D530468C2A0A59980007662C /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		D53046912A0A5ABE0007662C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		D53046932A0A5AEF0007662C /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
+		D53046982A0A5D6C0007662C /* Satoshi-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-LightItalic.otf"; sourceTree = "<group>"; };
+		D53046992A0A5D6C0007662C /* Satoshi-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Medium.otf"; sourceTree = "<group>"; };
+		D530469A2A0A5D6C0007662C /* Satoshi-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-BoldItalic.otf"; sourceTree = "<group>"; };
+		D530469B2A0A5D6C0007662C /* Satoshi-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Black.otf"; sourceTree = "<group>"; };
+		D530469C2A0A5D6C0007662C /* Satoshi-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-MediumItalic.otf"; sourceTree = "<group>"; };
+		D530469D2A0A5D6C0007662C /* Satoshi-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-BlackItalic.otf"; sourceTree = "<group>"; };
+		D530469E2A0A5D6C0007662C /* Satoshi-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Bold.otf"; sourceTree = "<group>"; };
+		D530469F2A0A5D6C0007662C /* Satoshi-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Regular.otf"; sourceTree = "<group>"; };
+		D53046A02A0A5D6C0007662C /* Satoshi-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Italic.otf"; sourceTree = "<group>"; };
+		D53046A12A0A5D6C0007662C /* Satoshi-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Light.otf"; sourceTree = "<group>"; };
+		D53046A22A0A5E540007662C /* UINib+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Extension.swift"; sourceTree = "<group>"; };
+		D53046A42A0A68CB0007662C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		D53046A62A0A6F5C0007662C /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		D5DD58332A0908980058BA23 /* Rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DD58362A0908980058BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5DD58382A0908980058BA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,11 +85,12 @@
 		D5DD587B2A0927410058BA23 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D5DD587D2A09277A0058BA23 /* DeezerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerHelper.swift; sourceTree = "<group>"; };
 		D5DD587F2A0928550058BA23 /* DeezerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerManager.swift; sourceTree = "<group>"; };
-		D5DD58812A0928C00058BA23 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		D5DD58812A0928C00058BA23 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		D5DD58832A092D9E0058BA23 /* Artists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artists.swift; sourceTree = "<group>"; };
 		D5DD58852A092E530058BA23 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		D5DD58872A092E8F0058BA23 /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
 		D5DD58892A092EB80058BA23 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		D5DD588C2A0989D60058BA23 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +107,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D53046952A0A5AF20007662C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				D530469B2A0A5D6C0007662C /* Satoshi-Black.otf */,
+				D530469D2A0A5D6C0007662C /* Satoshi-BlackItalic.otf */,
+				D530469E2A0A5D6C0007662C /* Satoshi-Bold.otf */,
+				D530469A2A0A5D6C0007662C /* Satoshi-BoldItalic.otf */,
+				D53046A02A0A5D6C0007662C /* Satoshi-Italic.otf */,
+				D53046A12A0A5D6C0007662C /* Satoshi-Light.otf */,
+				D53046982A0A5D6C0007662C /* Satoshi-LightItalic.otf */,
+				D53046992A0A5D6C0007662C /* Satoshi-Medium.otf */,
+				D530469C2A0A5D6C0007662C /* Satoshi-MediumItalic.otf */,
+				D530469F2A0A5D6C0007662C /* Satoshi-Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		D5DD582A2A0908980058BA23 = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +170,7 @@
 		D5DD584B2A0909ED0058BA23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D5DD58812A0928C00058BA23 /* Genre.swift */,
+				D5DD58812A0928C00058BA23 /* Genres.swift */,
 				D5DD58832A092D9E0058BA23 /* Artists.swift */,
 				D5DD58852A092E530058BA23 /* Artist.swift */,
 				D5DD58872A092E8F0058BA23 /* Albums.swift */,
@@ -137,6 +182,7 @@
 		D5DD584C2A0909FB0058BA23 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D5DD588B2A0989AB0058BA23 /* Splash */,
 				D5DD585A2A0918B20058BA23 /* Home */,
 				D5DD585C2A0918D60058BA23 /* Category */,
 				D5DD585D2A0918F30058BA23 /* Artist */,
@@ -158,6 +204,7 @@
 		D5DD584E2A090A210058BA23 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D53046A62A0A6F5C0007662C /* SearchField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,7 +212,10 @@
 		D5DD584F2A090A2A0058BA23 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D53046952A0A5AF20007662C /* Font */,
 				D5DD583F2A09089A0058BA23 /* Assets.xcassets */,
+				D53046912A0A5ABE0007662C /* Color.xcassets */,
+				D53046932A0A5AEF0007662C /* Icon.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -173,6 +223,9 @@
 		D5DD58502A090B340058BA23 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D53046A22A0A5E540007662C /* UINib+Extension.swift */,
+				D53046A42A0A68CB0007662C /* UIImageView+Extension.swift */,
+				D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -180,9 +233,9 @@
 		D5DD585A2A0918B20058BA23 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D5DD58672A0923460058BA23 /* Cell */,
 				D5DD585F2A091A010058BA23 /* HomeViewController.swift */,
 				D5DD58612A091A1B0058BA23 /* HomeViewModel.swift */,
+				D5DD58672A0923460058BA23 /* Cell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -230,6 +283,8 @@
 		D5DD58672A0923460058BA23 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D530468B2A0A59980007662C /* HomeCollectionViewCell.swift */,
+				D530468C2A0A59980007662C /* HomeCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -269,6 +324,14 @@
 				D5DD587B2A0927410058BA23 /* NetworkManager.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		D5DD588B2A0989AB0058BA23 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D5DD588C2A0989D60058BA23 /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,9 +402,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53046942A0A5AEF0007662C /* Icon.xcassets in Resources */,
 				D5DD58432A09089A0058BA23 /* LaunchScreen.storyboard in Resources */,
 				D5DD58402A09089A0058BA23 /* Assets.xcassets in Resources */,
+				D530468E2A0A59980007662C /* HomeCollectionViewCell.xib in Resources */,
 				D5DD583E2A0908980058BA23 /* Main.storyboard in Resources */,
+				D53046922A0A5ABE0007662C /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,19 +418,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53046A92A0A7BF60007662C /* UIViewController+Extension.swift in Sources */,
 				D5DD587A2A0927160058BA23 /* NetworkHelper.swift in Sources */,
 				D5DD586B2A0923B10058BA23 /* ArtistViewModel.swift in Sources */,
 				D5DD58842A092D9E0058BA23 /* Artists.swift in Sources */,
 				D5DD58662A09233B0058BA23 /* CategoryViewModel.swift in Sources */,
 				D5DD58372A0908980058BA23 /* AppDelegate.swift in Sources */,
 				D5DD588A2A092EB80058BA23 /* Album.swift in Sources */,
+				D53046A52A0A68CB0007662C /* UIImageView+Extension.swift in Sources */,
+				D530468D2A0A59980007662C /* HomeCollectionViewCell.swift in Sources */,
 				D5DD58692A0923990058BA23 /* ArtistViewController.swift in Sources */,
 				D5DD58392A0908980058BA23 /* SceneDelegate.swift in Sources */,
+				D53046A72A0A6F5C0007662C /* SearchField.swift in Sources */,
 				D5DD586D2A0923F10058BA23 /* AlbumViewController.swift in Sources */,
 				D5DD58622A091A1B0058BA23 /* HomeViewModel.swift in Sources */,
 				D5DD58802A0928550058BA23 /* DeezerManager.swift in Sources */,
 				D5DD58642A09231E0058BA23 /* CategoryViewController.swift in Sources */,
-				D5DD58822A0928C00058BA23 /* Genre.swift in Sources */,
+				D5DD58822A0928C00058BA23 /* Genres.swift in Sources */,
 				D5DD586F2A0924090058BA23 /* AlbumViewModel.swift in Sources */,
 				D5DD58862A092E530058BA23 /* Artist.swift in Sources */,
 				D5DD587C2A0927410058BA23 /* NetworkManager.swift in Sources */,
@@ -373,6 +443,8 @@
 				D5DD587E2A09277A0058BA23 /* DeezerHelper.swift in Sources */,
 				D5DD58602A091A010058BA23 /* HomeViewController.swift in Sources */,
 				D5DD58732A0924470058BA23 /* FavoriteViewModel.swift in Sources */,
+				D5DD588D2A0989D60058BA23 /* SplashViewController.swift in Sources */,
+				D53046A32A0A5E540007662C /* UINib+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
