@@ -29,7 +29,7 @@ class SearchField: UITextField {
         layer.borderWidth = 1
         layer.cornerRadius = 0
         tintColor = UIColor(named: "main.primary")
-        backgroundColor = UIColor(named: "input.color")
+        backgroundColor = UIColor.clear
         attributedPlaceholder = NSAttributedString(string: "Search album or artist", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "text.secondry")])
         
         changeIconImage(named: "search")
