@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D51034672A0AA2A200C1A624 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51034662A0AA2A200C1A624 /* TabBar.swift */; };
+		D510346A2A0AAF7F00C1A624 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51034682A0AAF7F00C1A624 /* FavoritesTableViewCell.swift */; };
+		D510346B2A0AAF7F00C1A624 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D51034692A0AAF7F00C1A624 /* FavoritesTableViewCell.xib */; };
 		D530468D2A0A59980007662C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530468B2A0A59980007662C /* HomeCollectionViewCell.swift */; };
 		D530468E2A0A59980007662C /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D530468C2A0A59980007662C /* HomeCollectionViewCell.xib */; };
 		D53046922A0A5ABE0007662C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53046912A0A5ABE0007662C /* Color.xcassets */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		D51034662A0AA2A200C1A624 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		D51034682A0AAF7F00C1A624 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		D51034692A0AAF7F00C1A624 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		D530468B2A0A59980007662C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		D530468C2A0A59980007662C /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		D53046912A0A5ABE0007662C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -249,9 +253,9 @@
 		D5DD585B2A0918B60058BA23 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				D5DD58772A0925740058BA23 /* Cell */,
 				D5DD58702A09242D0058BA23 /* FavoriteViewController.swift */,
 				D5DD58722A0924470058BA23 /* FavoriteViewModel.swift */,
+				D5DD58772A0925740058BA23 /* Cell */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -319,6 +323,8 @@
 		D5DD58772A0925740058BA23 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D51034682A0AAF7F00C1A624 /* FavoritesTableViewCell.swift */,
+				D51034692A0AAF7F00C1A624 /* FavoritesTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				D530468E2A0A59980007662C /* HomeCollectionViewCell.xib in Resources */,
 				D5DD583E2A0908980058BA23 /* Main.storyboard in Resources */,
 				D53046922A0A5ABE0007662C /* Color.xcassets in Resources */,
+				D510346B2A0AAF7F00C1A624 /* FavoritesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +456,7 @@
 				D5DD58712A09242D0058BA23 /* FavoriteViewController.swift in Sources */,
 				D5DD587E2A09277A0058BA23 /* DeezerHelper.swift in Sources */,
 				D5DD58602A091A010058BA23 /* HomeViewController.swift in Sources */,
+				D510346A2A0AAF7F00C1A624 /* FavoritesTableViewCell.swift in Sources */,
 				D53046AB2A0A87970007662C /* UILabel+Extension.swift in Sources */,
 				D5DD58732A0924470058BA23 /* FavoriteViewModel.swift in Sources */,
 				D5DD588D2A0989D60058BA23 /* SplashViewController.swift in Sources */,
