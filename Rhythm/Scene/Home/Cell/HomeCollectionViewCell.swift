@@ -9,7 +9,6 @@ import UIKit
 import SkeletonView
 
 class HomeCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var view: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var label: UILabel!
 

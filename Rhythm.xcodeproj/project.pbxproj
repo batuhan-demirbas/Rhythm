@@ -16,6 +16,8 @@
 		D5232D142A0BF50C000C098A /* Satoshi-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D5232D0F2A0BF50C000C098A /* Satoshi-Regular.otf */; };
 		D5232D152A0BF50C000C098A /* Satoshi-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D5232D102A0BF50C000C098A /* Satoshi-Medium.otf */; };
 		D5232D172A0BF841000C098A /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5232D162A0BF841000C098A /* Typography.swift */; };
+		D5232D1A2A0C295A000C098A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5232D182A0C295A000C098A /* CategoryCollectionViewCell.swift */; };
+		D5232D1B2A0C295A000C098A /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5232D192A0C295A000C098A /* CategoryCollectionViewCell.xib */; };
 		D530468D2A0A59980007662C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D530468B2A0A59980007662C /* HomeCollectionViewCell.swift */; };
 		D530468E2A0A59980007662C /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D530468C2A0A59980007662C /* HomeCollectionViewCell.xib */; };
 		D53046922A0A5ABE0007662C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53046912A0A5ABE0007662C /* Color.xcassets */; };
@@ -65,6 +67,8 @@
 		D5232D0F2A0BF50C000C098A /* Satoshi-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Regular.otf"; sourceTree = "<group>"; };
 		D5232D102A0BF50C000C098A /* Satoshi-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Medium.otf"; sourceTree = "<group>"; };
 		D5232D162A0BF841000C098A /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		D5232D182A0C295A000C098A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D5232D192A0C295A000C098A /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		D530468B2A0A59980007662C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		D530468C2A0A59980007662C /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		D53046912A0A5ABE0007662C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -261,9 +265,9 @@
 		D5DD585C2A0918D60058BA23 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				D5DD58742A0925540058BA23 /* Cell */,
 				D5DD58632A09231E0058BA23 /* CategoryViewController.swift */,
 				D5DD58652A09233B0058BA23 /* CategoryViewModel.swift */,
+				D5DD58742A0925540058BA23 /* Cell */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -300,6 +304,8 @@
 		D5DD58742A0925540058BA23 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D5232D182A0C295A000C098A /* CategoryCollectionViewCell.swift */,
+				D5232D192A0C295A000C098A /* CategoryCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 				D53046942A0A5AEF0007662C /* Icon.xcassets in Resources */,
 				D5DD58432A09089A0058BA23 /* LaunchScreen.storyboard in Resources */,
 				D5DD58402A09089A0058BA23 /* Assets.xcassets in Resources */,
+				D5232D1B2A0C295A000C098A /* CategoryCollectionViewCell.xib in Resources */,
 				D530468E2A0A59980007662C /* HomeCollectionViewCell.xib in Resources */,
 				D5DD583E2A0908980058BA23 /* Main.storyboard in Resources */,
 				D53046922A0A5ABE0007662C /* Color.xcassets in Resources */,
@@ -434,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5232D1A2A0C295A000C098A /* CategoryCollectionViewCell.swift in Sources */,
 				D53046A92A0A7BF60007662C /* UIViewController+Extension.swift in Sources */,
 				D5DD587A2A0927160058BA23 /* NetworkHelper.swift in Sources */,
 				D5DD586B2A0923B10058BA23 /* ArtistViewModel.swift in Sources */,

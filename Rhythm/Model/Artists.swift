@@ -12,7 +12,7 @@ struct Artists: Codable {
     let data: [ArtistsDatum]
 }
 
-// MARK: - ArtistsDatum
+// MARK: - Datum
 struct ArtistsDatum: Codable {
     let id: Int
     let name: String
@@ -20,7 +20,7 @@ struct ArtistsDatum: Codable {
     let pictureSmall, pictureMedium, pictureBig, pictureXl: String
     let radio: Bool
     let tracklist: String
-    let type: TypeEnum
+    let type: TypeEnumArtists
 
     enum CodingKeys: String, CodingKey {
         case id, name, picture
@@ -30,4 +30,8 @@ struct ArtistsDatum: Codable {
         case pictureXl = "picture_xl"
         case radio, tracklist, type
     }
+}
+
+enum TypeEnumArtists: String, Codable {
+    case artist = "artist"
 }

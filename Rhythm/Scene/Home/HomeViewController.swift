@@ -37,6 +37,15 @@ extension HomeViewController: HomeViewModelDelegate {
 }
 
 extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewModel = CategoryViewModel(genre: viewModel.genres[indexPath.row])
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController else {
+            return
+        }
+        viewController.viewModel = viewModel
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {

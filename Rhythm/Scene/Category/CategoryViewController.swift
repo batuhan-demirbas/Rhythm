@@ -8,6 +8,12 @@
 import UIKit
 
 class CategoryViewController: UIViewController {
+    
+    var viewModel: CategoryViewModel! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,4 +21,17 @@ class CategoryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+}
+
+extension CategoryViewController: CategoryViewModelDelegate {
+    func prepareCollectionView() {
+        //sfsdf
+    }
+    
+    func reloadData() {
+        //sfsdf
+    }
+    
+    
+    
 }

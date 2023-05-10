@@ -8,9 +8,9 @@
 import Foundation
 
 enum DeezerEndpoint: String {
-    case genre = "/genre"
-    case artist = "/artist"
-    case album = "/album"
+    case genre = "/genre/"
+    case artist = "/artist/"
+    case album = "/album/"
     
     var path: String {
         switch self {
