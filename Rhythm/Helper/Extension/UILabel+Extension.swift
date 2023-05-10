@@ -8,24 +8,78 @@
 import UIKit
 
 @IBDesignable extension UILabel {
-    
-    @IBInspectable var lineHeight: CGFloat {
+
+    @IBInspectable var fontStyle: String {
         get {
-            guard let paragraphStyle = attributedText?.attribute(NSAttributedString.Key.paragraphStyle, at: 0, effectiveRange: nil) as? NSMutableParagraphStyle else {
-                return 0
-            }
-            return paragraphStyle.lineSpacing
+            return font.fontName
         }
         set {
-            guard let currentText = text else {
-                return
+            guard let newStyle = FontStyles(rawValue: newValue) else {
+                fatalError("Font style not found.")
             }
-            let attributedString = NSMutableAttributedString(string: currentText)
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = newValue
-            attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attributedString.length))
-            attributedText = attributedString
+            fontStyleEnum = newStyle
         }
     }
     
+    var fontStyleEnum: FontStyles {
+        get {
+            guard let style = FontStyles(rawValue: font.fontName) else {
+                fatalError("Font style not found.")
+            }
+            return style
+        }
+        set {
+            switch newValue {
+            case .h1_black:
+                setTypographyStyle(Typography.h1_black)
+            case .h1_regular:
+                setTypographyStyle(Typography.h1_regular)
+            case .h2_black:
+                setTypographyStyle(Typography.h2_black)
+            case .h2_regular:
+                setTypographyStyle(Typography.h2_regular)
+            case .h3_black:
+                setTypographyStyle(Typography.h3_black)
+            case .h3_regular:
+                setTypographyStyle(Typography.h3_regular)
+            case .sh1_bold:
+                setTypographyStyle(Typography.sh1_bold)
+            case .sh1_regular:
+                setTypographyStyle(Typography.sh1_regular)
+            case .sh2_bold:
+                setTypographyStyle(Typography.sh2_bold)
+            case .sh2_regular:
+                setTypographyStyle(Typography.sh2_regular)
+            case .b1_bold:
+                setTypographyStyle(Typography.b1_bold)
+            case .b1_medium:
+                setTypographyStyle(Typography.b1_medium)
+            case .b2_bold:
+                setTypographyStyle(Typography.b2_bold)
+            case .b2_medium:
+                setTypographyStyle(Typography.b2_medium)
+            case .b3_bold:
+                setTypographyStyle(Typography.b3_bold)
+            case .b3_medium:
+                setTypographyStyle(Typography.b3_medium)
+            case .b4_bold:
+                setTypographyStyle(Typography.b4_bold)
+            case .b4_medium:
+                setTypographyStyle(Typography.b4_medium)
+            }
+        }
+    }
+
+    private func setTypographyStyle(_ style: Typography.FontStyle) {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.35
+
+        let attributedString = NSMutableAttributedString(string: text ?? "", attributes: [
+            .font: style.font,
+            .paragraphStyle: paragraphStyle
+        ])
+
+        attributedText = attributedString
+    }
+
 }
