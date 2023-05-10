@@ -32,8 +32,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoR-3Y-82x">
-                                <rect key="frame" x="16" y="121.33333333333333" width="39" height="17.666666666666671"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoR-3Y-82x">
+                                <rect key="frame" x="16" y="121.33333333333333" width="123" height="17.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="14"/>
                                 <color key="textColor" name="text.primary"/>
                                 <nil key="highlightedColor"/>
@@ -47,6 +47,7 @@
                             <constraint firstItem="WoR-3Y-82x" firstAttribute="leading" secondItem="UVb-eh-SxR" secondAttribute="leading" constant="16" id="0LK-bj-t4X"/>
                             <constraint firstAttribute="trailing" secondItem="G2S-1S-bB8" secondAttribute="trailing" id="A4v-a5-bYe"/>
                             <constraint firstAttribute="bottom" secondItem="WoR-3Y-82x" secondAttribute="bottom" constant="16" id="GH4-sF-ZXP"/>
+                            <constraint firstAttribute="trailing" secondItem="WoR-3Y-82x" secondAttribute="trailing" constant="16" id="UcC-Sb-EzR"/>
                             <constraint firstAttribute="bottom" secondItem="G2S-1S-bB8" secondAttribute="bottom" id="Xb4-Mp-l1p"/>
                             <constraint firstItem="G2S-1S-bB8" firstAttribute="leading" secondItem="UVb-eh-SxR" secondAttribute="leading" id="lPz-rf-7cw"/>
                             <constraint firstItem="G2S-1S-bB8" firstAttribute="top" secondItem="UVb-eh-SxR" secondAttribute="top" id="xwH-Sy-wqM"/>
