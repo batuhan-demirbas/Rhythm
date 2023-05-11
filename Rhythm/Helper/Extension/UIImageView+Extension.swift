@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 
+@IBDesignable
 extension UIImageView {
     func addLinearGradient() {
         let gradientLayer = CAGradientLayer()

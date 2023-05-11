@@ -7,9 +7,47 @@
 
 import Foundation
 
-class FavoriteViewModel {
-    var isLoading: Bool = false
-    var errorCallback: ((String)->())?
-    var successCallback: (()->())?
+protocol FavoriteViewModelDelegate: AnyObject {
+    func prepareCollectionView()
+    func reloadData()
+}
+
+protocol FavoriteViewModelProtocol {
+    var delegate: FavoriteViewModelDelegate? { get set }
+    var numberOfItems: Int { get }
+    var favorites: [Favorites] { get }
+    func load()
+    func remove(favorite: Favorites)
+}
+
+final class FavoriteViewModel {
+    let manager = CoreDataManager.shared
+    weak var delegate: FavoriteViewModelDelegate?
+    
+    var favorites: [Favorites] = []
+    
+    private func fetchFavorites() {
+        favorites = manager.fetchFavorites()
+    }
+    
+    private func removeFavorites(favorite: Favorites) {
+        manager.deleteFavorite(favorite: favorite)
+    }
+
+}
+
+extension FavoriteViewModel: FavoriteViewModelProtocol {
+    var numberOfItems: Int {
+        favorites.count
+    }
+
+    func load() {
+        delegate?.prepareCollectionView()
+        fetchFavorites()
+    }
+    
+    func remove(favorite: Favorites) {
+        removeFavorites(favorite: favorite)
+    }
     
 }

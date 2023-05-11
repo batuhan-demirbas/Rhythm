@@ -57,16 +57,20 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EhX-ri-1mn">
                                 <rect key="frame" x="0.0" y="180" width="393" height="589"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WVJ-sg-4BK">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="0.0" id="WVJ-sg-4BK">
+                                    <size key="itemSize" width="327" height="54"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dDI-bv-I5p" id="97L-P3-xly"/>
+                                    <outlet property="delegate" destination="dDI-bv-I5p" id="wok-3K-Ui7"/>
+                                </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M15-Fc-U8B">
-                                <rect key="frame" x="24" y="135" width="345" height="45"/>
+                                <rect key="frame" x="24" y="103" width="345" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAd-ah-fAI">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="25"/>
@@ -74,7 +78,7 @@
                                         <color key="textColor" name="text.primary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 Songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXp-mz-D6I">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXp-mz-D6I">
                                         <rect key="frame" x="0.0" y="25" width="345" height="20"/>
                                         <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="16"/>
                                         <color key="textColor" name="text.secondry"/>
@@ -88,10 +92,10 @@
                         <constraints>
                             <constraint firstItem="6gg-un-7vj" firstAttribute="trailing" secondItem="sC9-ci-MF0" secondAttribute="trailing" id="0Sb-aL-SyD"/>
                             <constraint firstItem="sC9-ci-MF0" firstAttribute="trailing" secondItem="EhX-ri-1mn" secondAttribute="trailing" id="5bK-13-zXd"/>
-                            <constraint firstItem="M15-Fc-U8B" firstAttribute="top" secondItem="sC9-ci-MF0" secondAttribute="top" constant="32" id="5g8-ag-7Fr"/>
+                            <constraint firstItem="M15-Fc-U8B" firstAttribute="top" secondItem="sC9-ci-MF0" secondAttribute="top" id="5g8-ag-7Fr"/>
                             <constraint firstItem="6gg-un-7vj" firstAttribute="leading" secondItem="sC9-ci-MF0" secondAttribute="leading" id="C8S-9N-Fg6"/>
                             <constraint firstItem="6gg-un-7vj" firstAttribute="top" secondItem="7pi-6R-csT" secondAttribute="top" id="FuD-Ak-vVH"/>
-                            <constraint firstItem="EhX-ri-1mn" firstAttribute="top" secondItem="M15-Fc-U8B" secondAttribute="bottom" id="HYt-uW-Igv"/>
+                            <constraint firstItem="EhX-ri-1mn" firstAttribute="top" secondItem="M15-Fc-U8B" secondAttribute="bottom" constant="32" id="HYt-uW-Igv"/>
                             <constraint firstItem="sC9-ci-MF0" firstAttribute="bottom" secondItem="EhX-ri-1mn" secondAttribute="bottom" id="M9w-sU-1Sr"/>
                             <constraint firstItem="EhX-ri-1mn" firstAttribute="leading" secondItem="sC9-ci-MF0" secondAttribute="leading" id="ZBq-oF-9XX"/>
                             <constraint firstAttribute="bottom" secondItem="6gg-un-7vj" secondAttribute="bottom" id="p4K-Ce-8uR"/>
@@ -102,6 +106,10 @@
                     <tabBarItem key="tabBarItem" title="" selectedImage="favorites.fill" id="QID-Gr-or1">
                         <imageReference key="image" image="favorites" symbolScale="default" variableValue="1"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="collectionView" destination="EhX-ri-1mn" id="FaQ-qt-9ch"/>
+                        <outlet property="label" destination="sXp-mz-D6I" id="DAa-ZO-mKT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcn-FN-C8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,7 +274,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DBV-av-2F3">
                                 <rect key="frame" x="0.0" y="392" width="393" height="460"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1z-sv-iGo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1z-sv-iGo">
                                         <rect key="frame" x="24" y="24" width="345" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -275,10 +283,21 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="sh2_bold"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4oO-5f-nWs">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cl9-vp-sVA">
                                         <rect key="frame" x="24" y="60.333333333333286" width="345" height="399.66666666666674"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cYc-mi-RgY">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="5YB-vK-gIc" id="w6L-a2-OSE"/>
+                                            <outlet property="delegate" destination="5YB-vK-gIc" id="j5k-o2-h6u"/>
+                                        </connections>
+                                    </collectionView>
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="24" left="24" bottom="0.0" right="24"/>
                             </stackView>
@@ -289,10 +308,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HQc-a2-XqL">
-                                <rect key="frame" x="24" y="281" width="345" height="95"/>
+                                <rect key="frame" x="24" y="318.33333333333331" width="345" height="57.666666666666686"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Hot Chili Peppersss" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-5c-5qA">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="74.666666666666671"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-5c-5qA">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="37.333333333333336"/>
                                         <fontDescription key="fontDescription" name="SatoshiVariable-Bold" family="Satoshi Variable" pointSize="32"/>
                                         <color key="textColor" name="text.primary"/>
                                         <nil key="highlightedColor"/>
@@ -300,8 +319,8 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="h3_black"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbs-aU-klj">
-                                        <rect key="frame" x="0.0" y="74.666666666666686" width="345" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbs-aU-klj">
+                                        <rect key="frame" x="0.0" y="37.333333333333371" width="345" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="text.secondry"/>
                                         <nil key="highlightedColor"/>
@@ -333,6 +352,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="eUr-Kl-xwE"/>
                     <connections>
+                        <outlet property="collectionView" destination="cl9-vp-sVA" id="5jM-Wz-WEv"/>
+                        <outlet property="followersLabel" destination="Gbs-aU-klj" id="8AY-07-h2s"/>
+                        <outlet property="imageView" destination="ySU-rl-hff" id="LHy-QY-cOd"/>
+                        <outlet property="nameLabel" destination="nEk-5c-5qA" id="jK1-f9-ohY"/>
                         <segue destination="fT2-O9-fdF" kind="show" id="1CD-fg-jjn"/>
                     </connections>
                 </viewController>

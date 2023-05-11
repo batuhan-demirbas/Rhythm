@@ -22,6 +22,7 @@ final class HomeViewController: UIViewController {
         viewModel = HomeViewModel()
         viewModel.load()
     }
+    
 }
 
 extension HomeViewController: HomeViewModelDelegate {
