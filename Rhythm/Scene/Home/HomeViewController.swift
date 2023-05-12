@@ -8,28 +8,34 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
+    @IBOutlet var messageLabel: UILabel!
     @IBOutlet var searchField: UITextField!
     @IBOutlet var collectionView: UICollectionView!
-
+    
     var viewModel: HomeViewModelProtocol! {
         didSet {
             viewModel.delegate = self
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = HomeViewModel()
         viewModel.load()
+        
     }
     
 }
 
 extension HomeViewController: HomeViewModelDelegate {
+    func prepareViews() {
+        messageLabel.text = GreetingManager.getGreetingMessage()
+    }
+    
     func prepareCollectionView() {
         collectionView.register(UINib.loadNib(name: HomeCollectionViewCell.reuseIdentifier), forCellWithReuseIdentifier: HomeCollectionViewCell.reuseIdentifier)
     }
-
+    
     func reloadData() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
@@ -53,7 +59,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.numberOfItems
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeCollectionViewCell
         cell.genre = viewModel.genres[indexPath.row]
@@ -75,7 +81,7 @@ extension HomeViewController: UITextFieldDelegate {
         (textField as! SearchField).didBeginEditingSettings()
         hideKeyboardWhenTappedAround()
     }
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         (textField as! SearchField).didEndEditingSettings()
     }

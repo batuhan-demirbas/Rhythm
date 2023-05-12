@@ -8,6 +8,7 @@
 import Foundation
 
 protocol HomeViewModelDelegate: AnyObject {
+    func prepareViews()
     func prepareCollectionView()
     func reloadData()
 }
@@ -49,6 +50,7 @@ extension HomeViewModel: HomeViewModelProtocol {
 
     func load() {
         delegate?.prepareCollectionView()
+        delegate?.prepareViews()
         fetchGenres()
     }
 }
