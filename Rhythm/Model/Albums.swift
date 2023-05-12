@@ -22,10 +22,10 @@ struct Datum: Codable {
     let md5Image: String
     let genreID, fans: Int
     let releaseDate: String
-    let recordType: RecordTypeEnum
+    let recordType: String
     let tracklist: String
     let explicitLyrics: Bool
-    let type: RecordTypeEnum
+    let type: String
 
     enum CodingKeys: String, CodingKey {
         case id, title, link, cover
@@ -42,8 +42,4 @@ struct Datum: Codable {
         case explicitLyrics = "explicit_lyrics"
         case type
     }
-}
-
-enum RecordTypeEnum: String, Codable {
-    case album = "album"
 }

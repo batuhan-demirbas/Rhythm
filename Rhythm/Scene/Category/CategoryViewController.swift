@@ -40,7 +40,7 @@ extension CategoryViewController: CategoryViewModelDelegate {
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let viewModel = ArtistViewModel()
+        let viewModel = ArtistViewModel(artistId: viewModel.artists[indexPath.row].id)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "ArtistViewController") as? ArtistViewController else {
             return

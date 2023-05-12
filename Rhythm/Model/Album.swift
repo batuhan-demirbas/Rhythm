@@ -20,14 +20,14 @@ struct Album: Codable {
     let label: String
     let nbTracks, duration, fans: Int
     let releaseDate: String
-    let recordType: RecordTypeEnum
+    let recordType: String
     let available: Bool
     let tracklist: String
     let explicitLyrics: Bool
     let explicitContentLyrics, explicitContentCover: Int
     let contributors: [Contributor]
     let artist: ArtistDetail
-    let type: RecordTypeEnum
+    let type: String
     let tracks: Tracks
 
     enum CodingKeys: String, CodingKey {
@@ -166,7 +166,7 @@ struct AlbumClass: Codable {
     let coverSmall, coverMedium, coverBig, coverXl: String
     let md5Image: Md5Image
     let tracklist: String
-    let type: RecordTypeEnum
+    let type: String
 
     enum CodingKeys: String, CodingKey {
         case id, title, cover
