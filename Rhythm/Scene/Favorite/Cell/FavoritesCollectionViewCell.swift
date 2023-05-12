@@ -26,7 +26,10 @@ class FavoritesCollectionViewCell: UICollectionViewCell {
         // Initialization code
         imageView.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
         imageView.layer.borderWidth = 1
-        imageView.addLinearGradient()
+        let screenWidth = UIScreen.main.bounds.width
+        let width = (screenWidth - 48 - 16) / 2
+        let height = width
+        imageView.addLinearGradient(width: width, height: height, alpha: 0.85)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapIcon))
         iconImageView.addGestureRecognizer(tapGesture)
@@ -37,7 +40,7 @@ class FavoritesCollectionViewCell: UICollectionViewCell {
         guard let track = track else { return }
         imageView.loadImage(from: track.image ?? "")
         nameLabel.text = track.name
-        durationLabel.text = String(track.duration)
+        durationLabel.text = Int(track.duration).asMinutesSeconds()
         
     }
     

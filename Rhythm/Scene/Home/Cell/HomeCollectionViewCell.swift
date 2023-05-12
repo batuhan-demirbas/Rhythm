@@ -20,7 +20,10 @@ class HomeCollectionViewCell: UICollectionViewCell {
         // Initialization code
         imageView.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
         imageView.layer.borderWidth = 1
-        imageView.addLinearGradient()
+        let screenWidth = UIScreen.main.bounds.width
+        let width = (screenWidth - 48 - 16) / 2
+        let height = width
+        imageView.addLinearGradient(width: width, height: height, alpha: 0.85)
         
     }
 

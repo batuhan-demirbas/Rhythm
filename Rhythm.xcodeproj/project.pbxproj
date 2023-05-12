@@ -27,6 +27,7 @@
 		D53046A72A0A6F5C0007662C /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A62A0A6F5C0007662C /* SearchField.swift */; };
 		D53046A92A0A7BF60007662C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */; };
 		D53046AB2A0A87970007662C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046AA2A0A87970007662C /* UILabel+Extension.swift */; };
+		D572B64B2A0E22DD00B2F226 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572B64A2A0E22DD00B2F226 /* Int+Extension.swift */; };
 		D58FC22C2A0D26FF00FF666D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC22B2A0D26FF00FF666D /* CoreDataManager.swift */; };
 		D58FC22E2A0D2B0B00FF666D /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC22D2A0D2B0B00FF666D /* Favorite.swift */; };
 		D58FC2382A0D3C0700FF666D /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D58FC2362A0D3C0700FF666D /* Database.xcdatamodeld */; };
@@ -83,6 +84,7 @@
 		D53046A62A0A6F5C0007662C /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
 		D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		D53046AA2A0A87970007662C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		D572B64A2A0E22DD00B2F226 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		D58FC22B2A0D26FF00FF666D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D58FC22D2A0D2B0B00FF666D /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		D58FC2372A0D3C0700FF666D /* FavoritesEntity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoritesEntity.xcdatamodel; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				D53046A42A0A68CB0007662C /* UIImageView+Extension.swift */,
 				D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */,
 				D53046AA2A0A87970007662C /* UILabel+Extension.swift */,
+				D572B64A2A0E22DD00B2F226 /* Int+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				D5DD58842A092D9E0058BA23 /* Artists.swift in Sources */,
 				D5DD58662A09233B0058BA23 /* CategoryViewModel.swift in Sources */,
 				D5DD58372A0908980058BA23 /* AppDelegate.swift in Sources */,
+				D572B64B2A0E22DD00B2F226 /* Int+Extension.swift in Sources */,
 				D5DD588A2A092EB80058BA23 /* Album.swift in Sources */,
 				D53046A52A0A68CB0007662C /* UIImageView+Extension.swift in Sources */,
 				D5232D2A2A0C3F04000C098A /* ArtistCollectionViewCell.swift in Sources */,
