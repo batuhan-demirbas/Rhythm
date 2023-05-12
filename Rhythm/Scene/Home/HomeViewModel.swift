@@ -24,23 +24,15 @@ final class HomeViewModel {
     let manager = DeezerManager.shared
     weak var delegate: HomeViewModelDelegate?
     var genres: [GenreDatum] = []
+    
+    init(genres: [GenreDatum]) {
+        self.genres = genres
+    }
 
     var isLoading: Bool = false
     var errorCallback: ((String) -> Void)?
     var successCallback: (() -> Void)?
-
-    func fetchGenres() {
-        manager.getGenres { [weak self] result, error in
-            guard let result = result else { return }
-            if let error = error {
-                self?.errorCallback?(error.localizedDescription)
-            } else {
-                self?.genres = result.data
-                self?.delegate?.reloadData()
-                self?.successCallback?()
-            }
-        }
-    }
+    
 }
 
 extension HomeViewModel: HomeViewModelProtocol {
@@ -51,6 +43,6 @@ extension HomeViewModel: HomeViewModelProtocol {
     func load() {
         delegate?.prepareCollectionView()
         delegate?.prepareViews()
-        fetchGenres()
     }
+    
 }

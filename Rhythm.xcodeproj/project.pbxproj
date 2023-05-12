@@ -31,6 +31,7 @@
 		D5674F7E2A0E481A00050BC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5674F7D2A0E481A00050BC6 /* String.swift */; };
 		D5674F802A0E503B00050BC6 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5674F7F2A0E503B00050BC6 /* UITextField+Extension.swift */; };
 		D5674F822A0E592A00050BC6 /* GreetingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5674F812A0E592A00050BC6 /* GreetingManager.swift */; };
+		D5674F842A0E6ACA00050BC6 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5674F832A0E6ACA00050BC6 /* SplashViewModel.swift */; };
 		D572B64B2A0E22DD00B2F226 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572B64A2A0E22DD00B2F226 /* Int+Extension.swift */; };
 		D58FC22C2A0D26FF00FF666D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC22B2A0D26FF00FF666D /* CoreDataManager.swift */; };
 		D58FC22E2A0D2B0B00FF666D /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC22D2A0D2B0B00FF666D /* Favorite.swift */; };
@@ -93,6 +94,7 @@
 		D5674F7D2A0E481A00050BC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D5674F7F2A0E503B00050BC6 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		D5674F812A0E592A00050BC6 /* GreetingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingManager.swift; sourceTree = "<group>"; };
+		D5674F832A0E6ACA00050BC6 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		D572B64A2A0E22DD00B2F226 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		D58FC22B2A0D26FF00FF666D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D58FC22D2A0D2B0B00FF666D /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				D5DD588C2A0989D60058BA23 /* SplashViewController.swift */,
+				D5674F832A0E6ACA00050BC6 /* SplashViewModel.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				D5DD58622A091A1B0058BA23 /* HomeViewModel.swift in Sources */,
 				D5DD58802A0928550058BA23 /* DeezerManager.swift in Sources */,
 				D5DD58642A09231E0058BA23 /* CategoryViewController.swift in Sources */,
+				D5674F842A0E6ACA00050BC6 /* SplashViewModel.swift in Sources */,
 				D58FC22C2A0D26FF00FF666D /* CoreDataManager.swift in Sources */,
 				D5DD58822A0928C00058BA23 /* Genres.swift in Sources */,
 				D5DD586F2A0924090058BA23 /* AlbumViewModel.swift in Sources */,
