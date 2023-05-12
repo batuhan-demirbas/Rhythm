@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Rhythm
+
+  Created by Batuhan on 12.05.2023.
+  
+*/
+
+"home_title_morning" = "Günaydın,";
+"home_title_evening" = "Tünaydın,";
+"home_title_afternoon" = "İyi Akşamlar,";
+"home_title_night" = "İyi Geceler,";
+"home_description" = "Yeni şarkıları keşfedin!";
+"home_search_placeholder" = "Sanatçı ara...";
+"artist_followers" = " takipçi";
+"artist_collectionview_title" = "Albümler";
+"favroite_title" = "Favori Şarkılar";
+"favroite_subtitle" = " Şarkı";

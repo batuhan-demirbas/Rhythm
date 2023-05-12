@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Rhythm
+
+  Created by Batuhan on 12.05.2023.
+  
+*/
+
+"home_title_morning" = "Good Morning,";
+"home_title_evening" = "Good Evening,";
+"home_title_afternoon" = "Good Afternoon,";
+"home_title_night" = "Good Night,";
+"home_description" = "Explore new songs!";
+"home_search_placeholder" = "Search artist...";
+"artist_followers" = " followers";
+"artist_collectionview_title" = "Albums";
+"favroite_title" = "Favorite Songs";
+"favroite_subtitle" = " Songs";

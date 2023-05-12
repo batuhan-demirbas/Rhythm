@@ -1,0 +1,30 @@
+
+/* Class = "UITextField"; placeholder = "Search album or artist"; ObjectID = "41u-eK-3Oi"; */
+"41u-eK-3Oi.placeholder" = "Search album or artist";
+
+/* Class = "UIViewController"; title = "Home"; ObjectID = "8fV-dJ-m8w"; */
+"8fV-dJ-m8w.title" = "Home";
+
+/* Class = "UILabel"; text = "Favorite Songs"; ObjectID = "HAd-ah-fAI"; */
+"HAd-ah-fAI.text" = "Favorite Songs";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "MIf-Dn-zwe"; */
+"MIf-Dn-zwe.text" = "Artist Name";
+
+/* Class = "UILabel"; text = "0 follower"; ObjectID = "ORH-5H-iuQ"; */
+"ORH-5H-iuQ.text" = "0 follower";
+
+/* Class = "UIViewController"; title = "Favorites"; ObjectID = "dDI-bv-I5p"; */
+"dDI-bv-I5p.title" = "Favorites";
+
+/* Class = "UILabel"; text = "Albums"; ObjectID = "isH-mL-hP0"; */
+"isH-mL-hP0.text" = "Albums";
+
+/* Class = "UILabel"; text = "0 Song"; ObjectID = "sXp-mz-D6I"; */
+"sXp-mz-D6I.text" = "0 Song";
+
+/* Class = "UILabel"; text = "Hi,Batuhan"; ObjectID = "xjb-12-y1B"; */
+"xjb-12-y1B.text" = "Hi,Batuhan";
+
+/* Class = "UILabel"; text = "Explore new songs!"; ObjectID = "xsh-hZ-c3K"; */
+"xsh-hZ-c3K.text" = "Explore new songs!";

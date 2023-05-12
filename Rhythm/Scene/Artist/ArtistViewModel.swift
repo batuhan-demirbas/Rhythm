@@ -63,11 +63,11 @@ final class ArtistViewModel {
             }
         }
     }
-
+    
 }
 
 extension ArtistViewModel: ArtistViewModelProtocol {
-
+    
     var followers: Int {
         artist?.nbFan ?? 0
     }
@@ -83,7 +83,7 @@ extension ArtistViewModel: ArtistViewModelProtocol {
     var numberOfItems: Int {
         albums.count
     }
-
+    
     func load() {
         fetchArtist(artistId: artistId)
         

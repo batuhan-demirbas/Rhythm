@@ -27,7 +27,7 @@ class ArtistCollectionViewCell: UICollectionViewCell {
         guard let album = album else { return }
         imageView.loadImage(from: album.coverBig)
         nameLabel.text = album.title
-        yearLabel.text = album.releaseDate
+        yearLabel.text = album.releaseDate.year
         
     }
 }

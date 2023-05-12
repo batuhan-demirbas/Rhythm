@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol XIBLocalizable {
+    var localizedKey: String? { get set }
+}
+
 @IBDesignable extension UILabel {
+    
+    @IBInspectable var localizedKey: String? {
+        get { return nil }
+        set {
+            text = newValue?.localized
+        }
+    }
 
     @IBInspectable var fontStyle: String {
         get {

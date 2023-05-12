@@ -76,6 +76,7 @@
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="sh2_bold"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="favroite_title"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXp-mz-D6I">
@@ -135,7 +136,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pn7-jc-i7f">
                                         <rect key="frame" x="24" y="0.0" width="345" height="45"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi,Batuhan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjb-12-y1B">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greeting Message," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjb-12-y1B">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="25"/>
                                                 <fontDescription key="fontDescription" name="Satoshi-Bold" family="Satoshi" pointSize="20"/>
                                                 <color key="textColor" name="text.primary"/>
@@ -154,6 +155,7 @@
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="b1_medium"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="home_description"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
@@ -168,6 +170,9 @@
                                         <color key="textColor" name="text.primary"/>
                                         <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="home_search_placeholder"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="delegate" destination="8fV-dJ-m8w" id="OsE-yi-n6n"/>
                                         </connections>
@@ -212,6 +217,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="OZ4-HK-uXo" id="oL4-O6-qnv"/>
+                        <outlet property="messageLabel" destination="xjb-12-y1B" id="PfD-Fj-s12"/>
                         <outlet property="searchField" destination="41u-eK-3Oi" id="ynV-O9-wCV"/>
                         <segue destination="Bfu-4Z-SO8" kind="show" id="x3o-xA-rua"/>
                     </connections>
@@ -309,6 +315,7 @@
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="sh2_bold"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="artist_collectionview_title"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vXU-jq-lJM">
@@ -445,7 +452,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text.secondry">
-            <color red="1" green="1" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

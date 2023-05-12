@@ -33,7 +33,7 @@ extension ArtistViewController: ArtistViewModelDelegate {
         let screenWidth = UIScreen.main.bounds.width
         imageView.addLinearGradient(width: screenWidth, height: screenWidth, alpha: 0.85)
         nameLabel.text = viewModel.name
-        followersLabel.text = viewModel.followers.asFormattedString() + " followers"
+        followersLabel.text = viewModel.followers.asFormattedString() + "artist_followers"~
     }
     
     func prepareCollectionView() {
