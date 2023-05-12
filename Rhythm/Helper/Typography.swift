@@ -1,5 +1,5 @@
 //
-//  Typo.swift
+//  Typography.swift
 //  Rhythm
 //
 //  Created by Batuhan on 10.05.2023.
@@ -11,37 +11,35 @@ class Typography {
 
     struct FontStyle {
         let font: UIFont
-        let lineHeight: CGFloat
     }
 
-    static let h1_black = FontStyle(font: UIFont(name: "Satoshi-Black", size: 48)!, lineHeight: 64)
-    static let h1_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 48)!, lineHeight: 64)
+    static let h1_black = FontStyle(font: UIFont(name: "Satoshi-Black", size: 48)!)
+    static let h1_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 48)!)
     
-    static let h2_black = FontStyle(font: UIFont(name: "Satoshi-Black", size: 40)!, lineHeight: 56)
-    static let h2_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 40)!, lineHeight: 56)
+    static let h2_black = FontStyle(font: UIFont(name: "Satoshi-Black", size: 40)!)
+    static let h2_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 40)!)
     
-    static let h3_black = FontStyle(font: UIFont(name: "Satoshi-Black", size: 32)!, lineHeight: 48)
-    static let h3_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 32)!, lineHeight: 48)
+    static let h3_black = FontStyle(font: UIFont(name: "Satoshi-Black", size: 32)!)
+    static let h3_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 32)!)
     
-    static let sh1_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 24)!, lineHeight: 32)
-    static let sh1_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 24)!, lineHeight: 32)
+    static let sh1_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 24)!)
+    static let sh1_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 24)!)
     
-    static let sh2_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 20)!, lineHeight: 32)
-    static let sh2_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 20)!, lineHeight: 32)
+    static let sh2_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 20)!)
+    static let sh2_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 20)!)
     
-    static let b1_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 16)!, lineHeight: 24)
-    static let b1_medium = FontStyle(font: UIFont(name: "Satoshi-Medium", size: 16)!, lineHeight: 24)
+    static let b1_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 16)!)
+    static let b1_medium = FontStyle(font: UIFont(name: "Satoshi-Medium", size: 16)!)
     
-    static let b2_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 14)!, lineHeight: 22)
-    static let b2_medium = FontStyle(font: UIFont(name: "Satoshi-Medium", size: 14)!, lineHeight: 22)
+    static let b2_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 14)!)
+    static let b2_medium = FontStyle(font: UIFont(name: "Satoshi-Medium", size: 14)!)
     
-    static let b3_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 12)!, lineHeight: 16)
-    static let b3_medium = FontStyle(font: UIFont(name: "Satoshi-Medium", size: 12)!, lineHeight: 16)
+    static let b3_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 12)!)
+    static let b3_medium = FontStyle(font: UIFont(name: "Satoshi-Medium", size: 12)!)
     
-    static let b4_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 10)!, lineHeight: 14)
-    static let b4_medium = FontStyle(font: UIFont(name: "Satoshi-Medium", size: 10)!, lineHeight: 14)
+    static let b4_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 10)!)
+    static let b4_medium = FontStyle(font: UIFont(name: "Satoshi-Medium", size: 10)!)
 
-    
 }
 
 enum FontStyles: String {

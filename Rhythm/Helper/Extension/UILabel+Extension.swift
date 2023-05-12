@@ -72,7 +72,6 @@ import UIKit
 
     private func setTypographyStyle(_ style: Typography.FontStyle) {
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.35
 
         let attributedString = NSMutableAttributedString(string: text ?? "", attributes: [
             .font: style.font,
