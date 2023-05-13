@@ -34,7 +34,7 @@ final class CategoryViewModel {
     var errorCallback: ((String) -> Void)?
     var successCallback: (() -> Void)?
     
-    func fetchArtists(genreId: Int) {
+    private func fetchArtists(genreId: Int) {
         manager.getArtists(genreId: genreId) { [weak self] result, error in
             guard let result = result else { return }
             if let error = error {

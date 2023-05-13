@@ -13,7 +13,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet var label: UILabel!
 
     static let reuseIdentifier: String = "HomeCollectionViewCell"
-    var genre: GenreDatum?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +26,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         
     }
 
-    func configure() {
-        guard let genre = genre else { return }
+    func configure(genre: GenreDatum) {
         imageView.loadImage(from: genre.pictureBig)
         label.text = genre.name
         

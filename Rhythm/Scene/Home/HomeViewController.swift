@@ -61,8 +61,7 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeCollectionViewCell
-        cell.genre = viewModel.genres[indexPath.row]
-        cell.configure()
+        cell.configure(genre: viewModel.genres[indexPath.row])
         return cell
     }
 }

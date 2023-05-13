@@ -19,14 +19,19 @@ final class FavoriteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.delegate = self
         viewModel = FavoriteViewModel()
         viewModel.load()
-        label.text = String(viewModel.numberOfItems) + "favroite_subtitle"~
+        
     }
     
 }
 
 extension FavoriteViewController: FavoriteViewModelDelegate {
+    func prepareViews() {
+        label.text = String(viewModel.numberOfItems) + "favroite_subtitle"~
+    }
+    
     func prepareCollectionView() {
         collectionView.register(UINib.loadNib(name: FavoritesCollectionViewCell.reuseIdentifier), forCellWithReuseIdentifier: FavoritesCollectionViewCell.reuseIdentifier)
     }
@@ -73,4 +78,14 @@ extension FavoriteViewController: FavoritesCollectionViewCellDelegate {
         collectionView.reloadData()
     }
     
+}
+
+extension FavoriteViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController is FavoriteViewController {
+            viewModel.load()
+            collectionView.reloadData()
+        }
+        return true
+    }
 }

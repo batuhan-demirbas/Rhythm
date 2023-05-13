@@ -20,8 +20,9 @@ class CoreDataManager {
         context = appDelegate.persistentContainer.viewContext
     }
     
-    func saveFavorite(name: String, image: String, link: String, duration: Int) {
+    func saveFavorite(id: Int, name: String, image: String, link: String, duration: Int) {
         let newFavorite = NSEntityDescription.insertNewObject(forEntityName: "Favorites", into: context) as! Favorites
+        newFavorite.id = Int64(id)
         newFavorite.name = name
         newFavorite.image = image
         newFavorite.link = link

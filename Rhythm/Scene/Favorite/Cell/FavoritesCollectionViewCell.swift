@@ -27,9 +27,8 @@ class FavoritesCollectionViewCell: UICollectionViewCell {
         imageView.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
         imageView.layer.borderWidth = 1
         let screenWidth = UIScreen.main.bounds.width
-        let width = (screenWidth - 48 - 16) / 2
-        let height = width
-        imageView.addLinearGradient(width: width, height: height, alpha: 0.85)
+        let size = (screenWidth - 48 - 16) / 2
+        imageView.addLinearGradient(width: size, height: size, alpha: 0.85)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapIcon))
         iconImageView.addGestureRecognizer(tapGesture)

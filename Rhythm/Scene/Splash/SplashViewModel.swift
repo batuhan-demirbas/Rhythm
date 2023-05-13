@@ -27,7 +27,7 @@ final class SplashViewModel {
     var errorCallback: ((String) -> Void)?
     var successCallback: (() -> Void)?
 
-    func fetchGenres() {
+    private func fetchGenres() {
         manager.getGenres { [weak self] result, error in
             guard let result = result else { return }
             if let error = error {

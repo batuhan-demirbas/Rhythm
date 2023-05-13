@@ -8,6 +8,7 @@
 import Foundation
 
 protocol FavoriteViewModelDelegate: AnyObject {
+    func prepareViews()
     func prepareCollectionView()
     func reloadData()
 }
@@ -42,8 +43,10 @@ extension FavoriteViewModel: FavoriteViewModelProtocol {
     }
 
     func load() {
-        delegate?.prepareCollectionView()
         fetchFavorites()
+        delegate?.prepareCollectionView()
+        delegate?.prepareViews()
+        
     }
     
     func remove(favorite: Favorites) {
