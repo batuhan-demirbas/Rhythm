@@ -37,7 +37,7 @@ final class ArtistViewModel {
     init(artistId: Int) {
         self.artistId = artistId
     }
-    
+
     private func fetchArtist(artistId: Int) {
         manager.getArtist(artistId: artistId) { [weak self] result, error in
             guard let result = result else { return }
@@ -45,7 +45,6 @@ final class ArtistViewModel {
                 self?.errorCallback?(error.localizedDescription)
             } else {
                 self?.artist = result
-                print(artistId)
                 self?.fetchArtistAlbums(artistId: artistId)
                 self?.delegate?.prepareViews()
             }
@@ -86,7 +85,6 @@ extension ArtistViewModel: ArtistViewModelProtocol {
     
     func load() {
         fetchArtist(artistId: artistId)
-        
         delegate?.prepareCollectionView()
     }
     

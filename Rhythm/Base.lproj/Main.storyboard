@@ -381,14 +381,91 @@
         <!--Album View Controller-->
         <scene sceneID="h6a-iC-TRZ">
             <objects>
-                <viewController id="fT2-O9-fdF" customClass="AlbumViewController" customModule="Rhythm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlbumViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fT2-O9-fdF" customClass="AlbumViewController" customModule="Rhythm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WKI-Q5-Agk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="genre" translatesAutoresizingMaskIntoConstraints="NO" id="Bmz-KB-Tqu">
+                                <rect key="frame" x="68" y="44" width="257" height="257"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bmz-KB-Tqu" secondAttribute="height" multiplier="1:1" id="vOv-RN-gWN"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cp-RT-frt">
+                                <rect key="frame" x="24" y="321" width="345" height="54"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oth-7M-CaU">
+                                        <rect key="frame" x="0.0" y="0.0" width="291" height="54"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Album Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrM-4z-HVS">
+                                                <rect key="frame" x="0.0" y="0.0" width="291" height="34"/>
+                                                <fontDescription key="fontDescription" name="Satoshi-Bold" family="Satoshi" pointSize="24"/>
+                                                <color key="textColor" name="text.primary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name • 0 Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHU-ow-G3C">
+                                                <rect key="frame" x="0.0" y="34" width="291" height="20"/>
+                                                <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="16"/>
+                                                <color key="textColor" name="text.secondry"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thj-Nc-QBz">
+                                        <rect key="frame" x="291" y="0.0" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="thj-Nc-QBz" secondAttribute="height" multiplier="1:1" id="XNk-IJ-vIk"/>
+                                            <constraint firstAttribute="height" constant="54" id="uv9-S6-wrl"/>
+                                        </constraints>
+                                        <color key="tintColor" name="main.primary"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="play">
+                                            <backgroundConfiguration key="background" cornerRadius="27">
+                                                <color key="backgroundColor" name="main.primary"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bkY-4k-Ldj">
+                                <rect key="frame" x="0.0" y="399" width="393" height="453"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KUr-bX-ScA">
+                                    <size key="itemSize" width="327" height="44"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fT2-O9-fdF" id="mfR-ic-Asr"/>
+                                    <outlet property="delegate" destination="fT2-O9-fdF" id="0gE-t3-fca"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1rv-9C-T8Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1rv-9C-T8Q" firstAttribute="trailing" secondItem="bkY-4k-Ldj" secondAttribute="trailing" id="9h3-m8-v90"/>
+                            <constraint firstItem="1rv-9C-T8Q" firstAttribute="trailing" secondItem="3Cp-RT-frt" secondAttribute="trailing" constant="24" id="D8h-yv-R6d"/>
+                            <constraint firstItem="1rv-9C-T8Q" firstAttribute="trailing" secondItem="Bmz-KB-Tqu" secondAttribute="trailing" constant="68" id="KVn-l8-4BV"/>
+                            <constraint firstItem="3Cp-RT-frt" firstAttribute="leading" secondItem="1rv-9C-T8Q" secondAttribute="leading" constant="24" id="QUc-Ks-wPO"/>
+                            <constraint firstItem="bkY-4k-Ldj" firstAttribute="top" secondItem="3Cp-RT-frt" secondAttribute="bottom" constant="24" id="T5G-Bq-fNB"/>
+                            <constraint firstItem="3Cp-RT-frt" firstAttribute="top" secondItem="Bmz-KB-Tqu" secondAttribute="bottom" constant="20" id="WyG-ct-H9m"/>
+                            <constraint firstItem="Bmz-KB-Tqu" firstAttribute="leading" secondItem="1rv-9C-T8Q" secondAttribute="leading" constant="68" id="YRD-Xs-0qt"/>
+                            <constraint firstItem="bkY-4k-Ldj" firstAttribute="leading" secondItem="1rv-9C-T8Q" secondAttribute="leading" id="iso-wo-PmI"/>
+                            <constraint firstItem="1rv-9C-T8Q" firstAttribute="bottom" secondItem="bkY-4k-Ldj" secondAttribute="bottom" id="vp8-SR-RFO"/>
+                            <constraint firstItem="Bmz-KB-Tqu" firstAttribute="top" secondItem="1rv-9C-T8Q" secondAttribute="top" id="z0Z-Rf-9PQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kmw-TB-ZZS"/>
+                    <connections>
+                        <outlet property="albumDescriptionLabel" destination="SHU-ow-G3C" id="TlW-7j-Fdg"/>
+                        <outlet property="albumNameLabel" destination="yrM-4z-HVS" id="fOb-9e-87A"/>
+                        <outlet property="collectionView" destination="bkY-4k-Ldj" id="cn0-lw-bY9"/>
+                        <outlet property="imageView" destination="Bmz-KB-Tqu" id="uhd-aE-RUZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Akb-wL-I6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -467,6 +544,7 @@
         <image name="home" width="32" height="32"/>
         <image name="home.fill" width="32" height="32"/>
         <image name="logo" width="104" height="41"/>
+        <image name="play" width="24" height="24"/>
         <image name="splash" width="375" height="812"/>
         <namedColor name="background">
             <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

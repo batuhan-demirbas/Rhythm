@@ -13,7 +13,6 @@ class ArtistCollectionViewCell: UICollectionViewCell {
     @IBOutlet var yearLabel: UILabel!
     
     static let reuseIdentifier: String = "ArtistCollectionViewCell"
-    var album: Datum?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,11 +22,10 @@ class ArtistCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func configure() {
-        guard let album = album else { return }
+    func configure(album: Datum) {
         imageView.loadImage(from: album.coverBig)
         nameLabel.text = album.title
         yearLabel.text = album.releaseDate.year
-        
     }
+    
 }

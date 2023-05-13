@@ -10,11 +10,11 @@ import Foundation
 // MARK: - Album
 struct Album: Codable {
     let id: Int
-    let title: Title
+    let title: String
     let upc: String
     let link, share, cover: String
     let coverSmall, coverMedium, coverBig, coverXl: String
-    let md5Image: Md5Image
+    let md5Image: String
     let genreID: Int
     let genres: Genres
     let label: String
@@ -54,11 +54,11 @@ struct Album: Codable {
 // MARK: - Artist
 struct ArtistDetail: Codable {
     let id: Int
-    let name: Name
+    let name: String
     let picture: String
     let pictureSmall, pictureMedium, pictureBig, pictureXl: String
     let tracklist: String
-    let type: ArtistType
+    let type: String
 
     enum CodingKeys: String, CodingKey {
         case id, name, picture
@@ -70,26 +70,15 @@ struct ArtistDetail: Codable {
     }
 }
 
-enum Name: String, Codable {
-    case alternatif = "Alternatif"
-    case duman = "Duman"
-    case rock = "Rock"
-}
-
-enum ArtistType: String, Codable {
-    case artist = "artist"
-    case genre = "genre"
-}
-
 // MARK: - Contributor
 struct Contributor: Codable {
     let id: Int
-    let name: Name
+    let name: String
     let link, share, picture: String
     let pictureSmall, pictureMedium, pictureBig, pictureXl: String
     let radio: Bool
     let tracklist: String
-    let type: ArtistType
+    let type: String
     let role: String
 
     enum CodingKeys: String, CodingKey {
@@ -110,18 +99,10 @@ struct Genres: Codable {
 // MARK: - ArtistElement
 struct ArtistElement: Codable {
     let id: Int
-    let name: Name
+    let name: String
     let picture: String?
-    let type: ArtistType
+    let type: String
     let tracklist: String?
-}
-
-enum Md5Image: String, Codable {
-    case the1Db1F372Ca79871772B51D0D09F4A1B5 = "1db1f372ca79871772b51d0d09f4a1b5"
-}
-
-enum Title: String, Codable {
-    case darmaduman = "Darmaduman"
 }
 
 // MARK: - Tracks
@@ -139,10 +120,10 @@ struct TracksDatum: Codable {
     let explicitLyrics: Bool
     let explicitContentLyrics, explicitContentCover: Int
     let preview: String
-    let md5Image: Md5Image
+    let md5Image: String
     let artist: ArtistElement
     let album: AlbumClass
-    let type: PurpleType
+    let type: String
 
     enum CodingKeys: String, CodingKey {
         case id, readable, title
@@ -161,10 +142,10 @@ struct TracksDatum: Codable {
 // MARK: - AlbumClass
 struct AlbumClass: Codable {
     let id: Int
-    let title: Title
+    let title: String
     let cover: String
     let coverSmall, coverMedium, coverBig, coverXl: String
-    let md5Image: Md5Image
+    let md5Image: String
     let tracklist: String
     let type: String
 
@@ -177,8 +158,4 @@ struct AlbumClass: Codable {
         case md5Image = "md5_image"
         case tracklist, type
     }
-}
-
-enum PurpleType: String, Codable {
-    case track = "track"
 }

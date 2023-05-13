@@ -49,12 +49,12 @@ extension ArtistViewController: ArtistViewModelDelegate {
 
 extension ArtistViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let viewModel = AlbumViewModel()
+        let viewModel = AlbumViewModel(albumId: viewModel.albums[indexPath.row].id)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "AlbumViewController") as? AlbumViewController else {
             return
         }
-        //viewController.viewModel = viewModel
+        viewController.viewModel = viewModel
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -66,8 +66,7 @@ extension ArtistViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArtistCollectionViewCell.reuseIdentifier, for: indexPath) as! ArtistCollectionViewCell
-        cell.album = viewModel.albums[indexPath.row]
-        cell.configure()
+        cell.configure(album: viewModel.albums[indexPath.row])
         return cell
     }
 }
