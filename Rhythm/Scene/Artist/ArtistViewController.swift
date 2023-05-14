@@ -37,7 +37,7 @@ extension ArtistViewController: ArtistViewModelDelegate {
     }
     
     func prepareCollectionView() {
-        collectionView.register(UINib.loadNib(name: ArtistCollectionViewCell.reuseIdentifier), forCellWithReuseIdentifier: ArtistCollectionViewCell.reuseIdentifier)
+        collectionView.register(cellClass: ArtistCollectionViewCell.self)
     }
     
     func reloadData() {
@@ -65,7 +65,7 @@ extension ArtistViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArtistCollectionViewCell.reuseIdentifier, for: indexPath) as! ArtistCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(cellClass: ArtistCollectionViewCell.self, indexPath: indexPath)
         cell.configure(album: viewModel.albums[indexPath.row])
         return cell
     }

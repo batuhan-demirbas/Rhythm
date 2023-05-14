@@ -11,7 +11,6 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var label: UILabel!
     
-    static let reuseIdentifier: String = "CategoryCollectionViewCell"
     var artist: ArtistsDatum?
     
     override func awakeFromNib() {

@@ -17,7 +17,6 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var trackDuration: UILabel!
     @IBOutlet private weak var favIcon: UIImageView!
     
-    static let reuseIdentifier: String = "AlbumCollectionViewCell"
     weak var delegate: AlbumCollectionViewCellDelegate?
     
     var track: TracksDatum?

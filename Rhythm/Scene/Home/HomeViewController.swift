@@ -32,7 +32,7 @@ extension HomeViewController: HomeViewModelDelegate {
     }
     
     func prepareCollectionView() {
-        collectionView.register(UINib.loadNib(name: HomeCollectionViewCell.reuseIdentifier), forCellWithReuseIdentifier: HomeCollectionViewCell.reuseIdentifier)
+        collectionView.register(cellClass: HomeCollectionViewCell.self)
     }
     
     func reloadData() {
@@ -60,7 +60,7 @@ extension HomeViewController: UICollectionViewDataSource {
     } 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(cellClass: HomeCollectionViewCell.self, indexPath: indexPath)
         cell.configure(genre: viewModel.genres[indexPath.row])
         return cell
     }

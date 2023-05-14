@@ -37,7 +37,7 @@ extension AlbumViewController: AlbumViewModelDelegate {
     }
     
     func prepareCollectionView() {
-        collectionView.register(UINib.loadNib(name: AlbumCollectionViewCell.reuseIdentifier), forCellWithReuseIdentifier: AlbumCollectionViewCell.reuseIdentifier)
+        collectionView.register(cellClass: AlbumCollectionViewCell.self)
     }
     
     func reloadData() {
@@ -59,7 +59,7 @@ extension AlbumViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCollectionViewCell.reuseIdentifier, for: indexPath) as! AlbumCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(cellClass: AlbumCollectionViewCell.self, indexPath: indexPath)
         cell.delegate = self
         cell.configure(track: viewModel.getTrack(indexPath: indexPath))
         return cell

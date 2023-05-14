@@ -30,7 +30,7 @@
 		D53046A92A0A7BF60007662C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */; };
 		D53046AB2A0A87970007662C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53046AA2A0A87970007662C /* UILabel+Extension.swift */; };
 		D5674F792A0E471500050BC6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5674F7B2A0E471500050BC6 /* Localizable.strings */; };
-		D5674F7E2A0E481A00050BC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5674F7D2A0E481A00050BC6 /* String.swift */; };
+		D5674F7E2A0E481A00050BC6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5674F7D2A0E481A00050BC6 /* String+Extension.swift */; };
 		D5674F802A0E503B00050BC6 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5674F7F2A0E503B00050BC6 /* UITextField+Extension.swift */; };
 		D5674F822A0E592A00050BC6 /* GreetingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5674F812A0E592A00050BC6 /* GreetingManager.swift */; };
 		D5674F842A0E6ACA00050BC6 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5674F832A0E6ACA00050BC6 /* SplashViewModel.swift */; };
@@ -43,6 +43,7 @@
 		D5C2E8E82A1032CB002C2016 /* Mediaplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2E8E72A1032CB002C2016 /* Mediaplayer.swift */; };
 		D5C2E8EB2A10344E002C2016 /* Mediaplayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C2E8EA2A10344E002C2016 /* Mediaplayer.xib */; };
 		D5C2E8EF2A10B794002C2016 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2E8EE2A10B794002C2016 /* BaseViewController.swift */; };
+		D5C2E8F12A10BDC9002C2016 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2E8F02A10BDC9002C2016 /* UICollectionView+Extension.swift */; };
 		D5DD58372A0908980058BA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58362A0908980058BA23 /* AppDelegate.swift */; };
 		D5DD58392A0908980058BA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58382A0908980058BA23 /* SceneDelegate.swift */; };
 		D5DD583E2A0908980058BA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DD583C2A0908980058BA23 /* Main.storyboard */; };
@@ -98,7 +99,7 @@
 		D53046AA2A0A87970007662C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		D5674F7A2A0E471500050BC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D5674F7C2A0E472500050BC6 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D5674F7D2A0E481A00050BC6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D5674F7D2A0E481A00050BC6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D5674F7F2A0E503B00050BC6 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		D5674F812A0E592A00050BC6 /* GreetingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingManager.swift; sourceTree = "<group>"; };
 		D5674F832A0E6ACA00050BC6 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		D5C2E8E72A1032CB002C2016 /* Mediaplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediaplayer.swift; sourceTree = "<group>"; };
 		D5C2E8EA2A10344E002C2016 /* Mediaplayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Mediaplayer.xib; sourceTree = "<group>"; };
 		D5C2E8EE2A10B794002C2016 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D5C2E8F02A10BDC9002C2016 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		D5DD58332A0908980058BA23 /* Rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DD58362A0908980058BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5DD58382A0908980058BA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -295,9 +297,10 @@
 				D53046A42A0A68CB0007662C /* UIImageView+Extension.swift */,
 				D53046A82A0A7BF60007662C /* UIViewController+Extension.swift */,
 				D53046AA2A0A87970007662C /* UILabel+Extension.swift */,
-				D572B64A2A0E22DD00B2F226 /* Int+Extension.swift */,
-				D5674F7D2A0E481A00050BC6 /* String.swift */,
 				D5674F7F2A0E503B00050BC6 /* UITextField+Extension.swift */,
+				D5C2E8F02A10BDC9002C2016 /* UICollectionView+Extension.swift */,
+				D572B64A2A0E22DD00B2F226 /* Int+Extension.swift */,
+				D5674F7D2A0E481A00050BC6 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -511,7 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5674F7E2A0E481A00050BC6 /* String.swift in Sources */,
+				D5674F7E2A0E481A00050BC6 /* String+Extension.swift in Sources */,
 				D5232D1A2A0C295A000C098A /* CategoryCollectionViewCell.swift in Sources */,
 				D53046A92A0A7BF60007662C /* UIViewController+Extension.swift in Sources */,
 				D5DD587A2A0927160058BA23 /* NetworkHelper.swift in Sources */,
@@ -547,6 +550,7 @@
 				D5DD58712A09242D0058BA23 /* FavoriteViewController.swift in Sources */,
 				D5DD587E2A09277A0058BA23 /* DeezerHelper.swift in Sources */,
 				D5232D172A0BF841000C098A /* Typography.swift in Sources */,
+				D5C2E8F12A10BDC9002C2016 /* UICollectionView+Extension.swift in Sources */,
 				D5DD58602A091A010058BA23 /* HomeViewController.swift in Sources */,
 				D53046AB2A0A87970007662C /* UILabel+Extension.swift in Sources */,
 				D5DD58732A0924470058BA23 /* FavoriteViewModel.swift in Sources */,

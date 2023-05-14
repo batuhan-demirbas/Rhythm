@@ -27,7 +27,7 @@ final class CategoryViewController: UIViewController {
 
 extension CategoryViewController: CategoryViewModelDelegate {
     func prepareCollectionView() {
-        collectionView.register(UINib.loadNib(name: CategoryCollectionViewCell.reuseIdentifier), forCellWithReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier)
+        collectionView.register(cellClass: CategoryCollectionViewCell.self)
     }
     
     func reloadData() {
@@ -56,7 +56,7 @@ extension CategoryViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(cellClass: CategoryCollectionViewCell.self, indexPath: indexPath)
         cell.artist = viewModel.artists[indexPath.row]
         cell.configure()
         return cell

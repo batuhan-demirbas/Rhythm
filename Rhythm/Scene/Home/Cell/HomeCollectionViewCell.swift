@@ -11,9 +11,7 @@ import SkeletonView
 class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var label: UILabel!
-    
-    static let reuseIdentifier: String = "HomeCollectionViewCell"
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

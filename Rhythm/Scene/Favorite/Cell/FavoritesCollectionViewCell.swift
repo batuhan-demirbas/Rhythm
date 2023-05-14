@@ -17,7 +17,6 @@ final class FavoritesCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var durationLabel: UILabel!
     @IBOutlet private var iconImageView: UIImageView!
     
-    static let reuseIdentifier: String = "FavoritesCollectionViewCell"
     weak var delegate: FavoritesCollectionViewCellDelegate?
     var track: Favorites?
     

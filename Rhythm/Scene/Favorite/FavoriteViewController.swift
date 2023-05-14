@@ -33,7 +33,7 @@ extension FavoriteViewController: FavoriteViewModelDelegate {
     }
     
     func prepareCollectionView() {
-        collectionView.register(UINib.loadNib(name: FavoritesCollectionViewCell.reuseIdentifier), forCellWithReuseIdentifier: FavoritesCollectionViewCell.reuseIdentifier)
+        collectionView.register(cellClass: FavoritesCollectionViewCell.self)
     }
     
     func reloadData() {
@@ -55,7 +55,7 @@ extension FavoriteViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoritesCollectionViewCell.reuseIdentifier, for: indexPath) as! FavoritesCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(cellClass: FavoritesCollectionViewCell.self, indexPath: indexPath)
         cell.delegate = self
         cell.track = viewModel.favorites[indexPath.row]
         cell.configure()
