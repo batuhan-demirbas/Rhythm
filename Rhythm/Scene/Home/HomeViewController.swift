@@ -29,6 +29,7 @@ final class HomeViewController: BaseViewController {
 extension HomeViewController: HomeViewModelDelegate {
     func prepareViews() {
         messageLabel.text = GreetingManager.getGreetingMessage()
+        
     }
     
     func prepareCollectionView() {
@@ -44,18 +45,19 @@ extension HomeViewController: HomeViewModelDelegate {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let viewModel = CategoryViewModel(genre: viewModel.genres[indexPath.row])
+        let selectedGenre = viewModel.genres[indexPath.row]
+        let viewModel = CategoryViewModel(genre: selectedGenre)
         let viewController = CategoryViewController(nibName: "CategoryViewController", bundle: nil)
         viewController.viewModel = viewModel
         navigationController?.pushViewController(viewController, animated: true)
-
+        
     }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.numberOfItems
-    } 
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(cellClass: HomeCollectionViewCell.self, indexPath: indexPath)

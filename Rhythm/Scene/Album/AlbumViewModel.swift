@@ -21,6 +21,7 @@ protocol AlbumViewModelProtocol {
     var artistName: String { get }
     func getTrack(indexPath: IndexPath) -> TracksDatum
     func load()
+    func updateFavorites()
 }
 
 final class AlbumViewModel {
@@ -100,6 +101,11 @@ extension AlbumViewModel: AlbumViewModelProtocol {
         fetchAlbum(albumId: albumId)
         delegate?.prepareCollectionView()
         delegate?.prepareViews()
+    }
+    
+    func updateFavorites() {
+        fetchFavorites()
+        delegate?.prepareCollectionView()
     }
     
 }

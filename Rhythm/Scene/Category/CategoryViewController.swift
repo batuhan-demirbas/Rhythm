@@ -25,6 +25,18 @@ final class CategoryViewController: BaseViewController {
 }
 
 extension CategoryViewController: CategoryViewModelDelegate {
+    func prepareViews() {
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "back")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "back")
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "text.primary")
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor(named: "text.primary") ?? UIColor.black,
+            NSAttributedString.Key.font: UIFont(name: "Satoshi-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20)
+        ]
+        
+    }
+    
     func prepareCollectionView() {
         collectionView.register(cellClass: CategoryCollectionViewCell.self)
     }
@@ -39,7 +51,9 @@ extension CategoryViewController: CategoryViewModelDelegate {
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let viewModel = ArtistViewModel(artistId: viewModel.artists[indexPath.row].id)
+        let selectedArtist = viewModel.artists[indexPath.row]
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let viewModel = ArtistViewModel(artistId: selectedArtist.id)
         let viewController = ArtistViewController(nibName: "ArtistViewController", bundle: nil)
         viewController.viewModel = viewModel
         navigationController?.pushViewController(viewController, animated: true)

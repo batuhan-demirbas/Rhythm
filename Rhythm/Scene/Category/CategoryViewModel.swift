@@ -8,6 +8,7 @@
 import Foundation
 
 protocol CategoryViewModelDelegate: AnyObject {
+    func prepareViews()
     func prepareCollectionView()
     func reloadData()
 }
@@ -59,6 +60,7 @@ extension CategoryViewModel: CategoryViewModelProtocol {
     }
     
     func load() {
+        delegate?.prepareViews()
         delegate?.prepareCollectionView()
         fetchArtists(genreId: genre?.id ?? 0)
     }

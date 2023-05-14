@@ -1,32 +1,39 @@
 <div align="center">
-  <img src="./asset/banner.png" alt="App advertisement image" />
+  <img src="./asset/banner.png" alt="Uygulama reklam görseli" />
 </div>
 
-## Table of Contents
-- <a href="#about">About</a>
-- <a href="#project-tech-stack">Project Tech Stack</a>
-- <a href="#about">Proje Managment</a>
-- <a href="#backend-application">Backend Application</a>
-- <a href="#previews">Previews</a>
+## İçindekiler
+- [Proje Hakkında](#proje-hakkında)
+- [Projede Kullanılan Teknolojiler](#projede-kullanılan-teknolojiler)
+- [Proje Yönetimi](#proje-yönetimi)
+- [Backend](#backend)
+- [Önizlemeler](#önizlemeler)
 
-## About
-Developed using Rick and Morty API, **Portal Guide** application provides a comprehensive resource that provides users with quick and easy access to characters, locations and other information. There are horizontal and vertical CollectionViews on the homepage of the application, and locations and characters are listed in these sections. In addition, thanks to the search section, users can easily filter the characters and find detailed information about the characters on the detail page. The detail page has been adjusted according to the information given in the case. No extra design. The application is also specially set in landscape mode, so users can experience the application comfortably while using their device in landscape mode. Portal Guide app is an ideal option for users who want to embark on an enjoyable journey of discovery into the Rick and Morty universe.
+## Proje Hakkında
+Rhythm, Swift ve UIKit kullanarak geliştirdiğim, Deezer API'sine dayanan bir müzik uygulamasıdır. Bu uygulama, kullanıcıların geniş bir müzik kütüphanesinden sevdikleri şarkıları keşfetmelerine, albümlere ve sanatçılara göz atmalarına ve favori parçalarını saklamalarına olanak sağlar.
 
-## Project Tech Stack
-- Xcode: Version 14.3
-- Minimum iOS Version: 14.0
-- Design Pattern: **MVVM**
-- Dependenct Manager: Swift Package Manager
-- Dependencies: **Alamofire, CoreData, AVFoundation, Kingfisher, SkeletonView**
+## Projede Kullanılan Teknolojiler
+- Xcode: Sürüm 14.3
+- Minimum iOS Sürümü: 14.0
+- Mimari: **MVVM**
+- Bağımlılık Yöneticisi: Swift Package Manager
+- Kütüphaneler: **Alamofire, CoreData, AVFoundation, Kingfisher, SkeletonView**
 
-## Project Managment
+## Proje Yönetimi
+Rhythm projesinin her aşaması, geliştirme sürecinden tasarıma kadar, Notion üzerinden yönetildi. Bu süreçte, uygulamanın teknik yönlerinin yanı sıra marka değerini ve kullanıcı deneyimi de göz önünde bulunduruldu. Tüm süreç, başından sonuna kadar Notion'da planlandı.
 
-## Previews
-| Splash Screen  | Home Screen | Favorites Screen| 
+Notion üzerinde projenin geliştirme sürecini ve takibi görmek için [buraya](https://rhythm-app.notion.site/490696bc3e864f239ca9bcb1bc95c85f?v=0c346faa516c4296995aadd2d865e6ab) tıklayabilirsiniz.
+
+<div align="center">
+  <img src="./asset/notion.png" alt="Proje Yönetimi Görseli" />
+</div>
+
+## Önizlemeler
+| Başlangıç Ekranı  | Ana Ekran | Favoriler Ekranı| 
 | ------------- |:-------------:| :-------------:|
-| ![Preview](asset/splash.png) | ![Preview](asset/home.png) | ![Preview](asset/favorites.png) |
-| Category Screen |Artist Screen | Album Screen |
-| ![Preview](asset/category.png) | ![Preview](asset/artist.png) | ![Preview](asset/album.png) |
+| ![Önizleme](asset/splash.png) | ![Önizleme](asset/home.png) | ![Önizleme](asset/favorites.png) |
+| Kategori Ekranı |Sanatçı Ekranı | Albüm Ekranı |
+| ![Önizleme](asset/category.png) | ![Önizleme](asset/artist.png) | ![Önizleme](asset/album.png) |
 
-## Backend Application
-Backend services of this app are completely developed by someone else and can be viewed from this [link](https://rickandmortyapi.com/). I imported it into Postman for ease of use.
+## Backend
+Bu uygulamanın arka uç hizmetleri tamamen başka bir kişi tarafından geliştirilmiştir ve bu [link](https://rickandmortyapi.com/) üzerinden görüntülenebilir. Kullanım kolaylığı için Postman'a aktardım.

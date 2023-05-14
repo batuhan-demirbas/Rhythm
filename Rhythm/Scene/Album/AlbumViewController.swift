@@ -89,7 +89,7 @@ extension AlbumViewController: UICollectionViewDelegateFlowLayout {
 
 extension AlbumViewController: AlbumCollectionViewCellDelegate {
     func didTapIconInCell(_ cell: AlbumCollectionViewCell) {
-        viewModel.load()
+        viewModel.updateFavorites()
         collectionView.reloadData()
     }
     
