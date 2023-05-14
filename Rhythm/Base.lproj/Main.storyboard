@@ -67,6 +67,13 @@
                                     <outlet property="delegate" destination="dDI-bv-I5p" id="wok-3K-Ui7"/>
                                 </connections>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjV-PV-pua" customClass="AudioPlayerView" customModule="Rhythm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="710.66666666666663" width="393" height="92.333333333333371"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EjV-PV-pua" secondAttribute="height" multiplier="375:88" id="83c-gi-ltK"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M15-Fc-U8B">
                                 <rect key="frame" x="24" y="44" width="345" height="45"/>
                                 <subviews>
@@ -91,13 +98,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uI1-HH-eoK" customClass="MediaplayerView" customModule="Rhythm" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="696" width="393" height="107"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="uI1-HH-eoK" secondAttribute="height" multiplier="375:102" id="twC-vd-HQg"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sC9-ci-MF0"/>
                         <color key="backgroundColor" name="background"/>
@@ -109,11 +109,11 @@
                             <constraint firstItem="6gg-un-7vj" firstAttribute="top" secondItem="7pi-6R-csT" secondAttribute="top" id="FuD-Ak-vVH"/>
                             <constraint firstItem="EhX-ri-1mn" firstAttribute="top" secondItem="M15-Fc-U8B" secondAttribute="bottom" constant="32" id="HYt-uW-Igv"/>
                             <constraint firstItem="sC9-ci-MF0" firstAttribute="bottom" secondItem="EhX-ri-1mn" secondAttribute="bottom" id="M9w-sU-1Sr"/>
-                            <constraint firstItem="uI1-HH-eoK" firstAttribute="leading" secondItem="sC9-ci-MF0" secondAttribute="leading" id="Pds-Cu-JLT"/>
+                            <constraint firstItem="sC9-ci-MF0" firstAttribute="bottom" secondItem="EjV-PV-pua" secondAttribute="bottom" id="RVf-nS-EHz"/>
+                            <constraint firstItem="sC9-ci-MF0" firstAttribute="trailing" secondItem="EjV-PV-pua" secondAttribute="trailing" id="Ya6-41-PpT"/>
                             <constraint firstItem="EhX-ri-1mn" firstAttribute="leading" secondItem="sC9-ci-MF0" secondAttribute="leading" id="ZBq-oF-9XX"/>
-                            <constraint firstItem="sC9-ci-MF0" firstAttribute="bottom" secondItem="uI1-HH-eoK" secondAttribute="bottom" id="k65-31-g3P"/>
+                            <constraint firstItem="EjV-PV-pua" firstAttribute="leading" secondItem="sC9-ci-MF0" secondAttribute="leading" id="kGt-tm-pM4"/>
                             <constraint firstAttribute="bottom" secondItem="6gg-un-7vj" secondAttribute="bottom" id="p4K-Ce-8uR"/>
-                            <constraint firstItem="sC9-ci-MF0" firstAttribute="trailing" secondItem="uI1-HH-eoK" secondAttribute="trailing" id="qB4-tT-qal"/>
                             <constraint firstItem="sC9-ci-MF0" firstAttribute="trailing" secondItem="M15-Fc-U8B" secondAttribute="trailing" constant="24" id="tfT-Af-wpk"/>
                             <constraint firstItem="M15-Fc-U8B" firstAttribute="leading" secondItem="sC9-ci-MF0" secondAttribute="leading" constant="24" id="vyH-cO-jbN"/>
                         </constraints>
@@ -122,6 +122,7 @@
                         <imageReference key="image" image="favorites" symbolScale="default" variableValue="1"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="audioPlayerView" destination="EjV-PV-pua" id="oJ1-fM-cn3"/>
                         <outlet property="collectionView" destination="EhX-ri-1mn" id="FaQ-qt-9ch"/>
                         <outlet property="label" destination="sXp-mz-D6I" id="DAa-ZO-mKT"/>
                     </connections>

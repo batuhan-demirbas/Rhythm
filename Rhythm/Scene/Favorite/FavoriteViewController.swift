@@ -10,6 +10,9 @@ import UIKit
 final class FavoriteViewController: BaseViewController {
     @IBOutlet private var label: UILabel!
     @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet private var audioPlayerView: AudioPlayerView!
+    
+    let audioPlayer = AudioPlayer()
     
     var viewModel: FavoriteViewModelProtocol! {
         didSet {
@@ -17,9 +20,14 @@ final class FavoriteViewController: BaseViewController {
         }
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.delegate = self
+        audioPlayerView.delegate = self
         viewModel = FavoriteViewModel()
         viewModel.load()
         
@@ -30,6 +38,7 @@ final class FavoriteViewController: BaseViewController {
 extension FavoriteViewController: FavoriteViewModelDelegate {
     func prepareViews() {
         label.text = String(viewModel.numberOfItems) + "favroite_subtitle"~
+        NotificationCenter.default.addObserver(self, selector: #selector(songDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }
     
     func prepareCollectionView() {
@@ -45,7 +54,16 @@ extension FavoriteViewController: FavoriteViewModelDelegate {
 
 extension FavoriteViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let selectedTrack = viewModel.favorites[indexPath.row]
+        if let url = URL(string: selectedTrack.link ?? "") {
+            audioPlayer.playAudio(from: url)
+            updateTabBarView(isTopLineVisible: false)
+            audioPlayerView.imageView.loadImage(from: selectedTrack.image ?? "")
+            audioPlayerView.trackLabel.text = selectedTrack.trackName
+            audioPlayerView.artistLabel.text = selectedTrack.artistName
+            audioPlayerView.isHidden = false
+            audioPlayerView.playIcon.image = UIImage(named: "pause")
+        }
     }
 }
 
@@ -86,6 +104,30 @@ extension FavoriteViewController: UITabBarControllerDelegate {
             viewModel.load()
             collectionView.reloadData()
         }
+        audioPlayer.pauseAudio()
+        audioPlayerView.isHidden = true
         return true
     }
+}
+
+extension FavoriteViewController: AudioPlayerViewDelegate {
+    func didTappedPauseButton() {
+        audioPlayer.pauseAudio()
+    }
+    
+    func didTappedPlayButton() {
+        audioPlayer.resumeAudio()
+    }
+    
+    @objc func songDidFinishPlaying() {
+        audioPlayerView.isHidden = true
+        updateTabBarView(isTopLineVisible: true)
+    }
+    
+    func updateTabBarView(isTopLineVisible: Bool) {
+        let tabBar = tabBarController!.tabBar as! TabBar
+        tabBar.isTopLineVisible = isTopLineVisible
+        tabBar.setNeedsDisplay()
+    }
+    
 }

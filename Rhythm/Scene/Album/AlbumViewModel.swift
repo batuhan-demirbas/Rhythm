@@ -61,7 +61,7 @@ final class AlbumViewModel {
     }
     
     private func addFavorites(track: TracksDatum) {
-        coreDatakManager.saveFavorite(id: track.id, name: track.title, image: track.album.coverBig, link: track.preview, duration: track.duration)
+        coreDatakManager.saveFavorite(id: track.id, trackName: track.title, artistName: track.artist.name, image: track.album.coverBig, link: track.preview, duration: track.duration)
     }
     
 }

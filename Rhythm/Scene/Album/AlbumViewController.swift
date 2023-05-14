@@ -13,6 +13,9 @@ final class AlbumViewController: BaseViewController {
     @IBOutlet private weak var albumNameLabel: UILabel!
     @IBOutlet private weak var albumDescriptionLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var audioPlayerView: AudioPlayerView!
+    
+    let audioPlayer = AudioPlayer()
     
     var viewModel: AlbumViewModelProtocol! {
         didSet {
@@ -23,6 +26,7 @@ final class AlbumViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.load()
+        audioPlayerView.delegate = self
     }
     
 }
@@ -30,10 +34,11 @@ final class AlbumViewController: BaseViewController {
 extension AlbumViewController: AlbumViewModelDelegate {
     func prepareViews() {
         imageView.loadImage(from: viewModel.image)
-        imageView.layer.borderWidth = 1
-        imageView.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
+        imageView.addStroke()
         albumDescriptionLabel.text = "\(viewModel.artistName) • \(viewModel.numberOfItems) " + "favroite_subtitle"~
         albumNameLabel.text = viewModel.title
+        NotificationCenter.default.addObserver(self, selector: #selector(songDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+
     }
     
     func prepareCollectionView() {
@@ -49,7 +54,15 @@ extension AlbumViewController: AlbumViewModelDelegate {
 
 extension AlbumViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let selectedTrack = viewModel.getTrack(indexPath: indexPath)
+        if let url = URL(string: selectedTrack.preview ) {
+            audioPlayer.playAudio(from: url)
+            audioPlayerView.imageView.loadImage(from: selectedTrack.album.coverBig )
+            audioPlayerView.trackLabel.text = selectedTrack.title
+            audioPlayerView.artistLabel.text = selectedTrack.artist.name
+            audioPlayerView.isHidden = false
+            audioPlayerView.playIcon.image = UIImage(named: "pause")
+        }
     }
 }
 
@@ -80,6 +93,20 @@ extension AlbumViewController: AlbumCollectionViewCellDelegate {
         collectionView.reloadData()
     }
     
+}
+
+extension AlbumViewController: AudioPlayerViewDelegate {
+    func didTappedPauseButton() {
+        audioPlayer.pauseAudio()
+    }
+    
+    func didTappedPlayButton() {
+        audioPlayer.resumeAudio()
+    }
+    
+    @objc func songDidFinishPlaying() {
+        audioPlayerView.isHidden = true
+    }
     
 }
 

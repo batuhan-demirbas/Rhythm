@@ -23,8 +23,7 @@ final class FavoritesCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        imageView.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
-        imageView.layer.borderWidth = 1
+        imageView.addStroke()
         let screenWidth = UIScreen.main.bounds.width
         let size = (screenWidth - 48 - 16) / 2
         imageView.addLinearGradient(width: size, height: size, alpha: 0.85)
@@ -37,7 +36,7 @@ final class FavoritesCollectionViewCell: UICollectionViewCell {
     func configure() {
         guard let track = track else { return }
         imageView.loadImage(from: track.image ?? "")
-        nameLabel.text = track.name
+        nameLabel.text = track.trackName
         durationLabel.text = Int(track.duration).asMinutesSeconds()
         
     }

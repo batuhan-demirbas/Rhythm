@@ -15,8 +15,7 @@ final class ArtistCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        imageView.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
-        imageView.layer.borderWidth = 1
+        imageView.addStroke()
         
     }
     

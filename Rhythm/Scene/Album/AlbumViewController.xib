@@ -21,6 +21,7 @@
             <connections>
                 <outlet property="albumDescriptionLabel" destination="tfG-id-xup" id="q0x-lO-lWZ"/>
                 <outlet property="albumNameLabel" destination="0zd-nI-9gK" id="d9M-pH-YqO"/>
+                <outlet property="audioPlayerView" destination="VuF-gh-VO2" id="DtI-7f-vC1"/>
                 <outlet property="collectionView" destination="ZH4-dg-0oD" id="m1g-gu-j9r"/>
                 <outlet property="imageView" destination="NiP-hk-ymo" id="tfK-In-WQa"/>
                 <outlet property="view" destination="RjN-3F-Et8" id="znq-7K-BY1"/>
@@ -91,6 +92,13 @@
                         <outlet property="delegate" destination="-1" id="fAL-lY-fmQ"/>
                     </connections>
                 </collectionView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VuF-gh-VO2" customClass="AudioPlayerView" customModule="Rhythm" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="725.66666666666663" width="393" height="92.333333333333371"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="VuF-gh-VO2" secondAttribute="height" multiplier="375:88" id="oJt-rD-JVN"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="xl8-Pz-KWv"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,7 +111,10 @@
                 <constraint firstItem="IBH-IH-oWz" firstAttribute="top" secondItem="RjN-3F-Et8" secondAttribute="top" id="QAG-m3-CCz"/>
                 <constraint firstItem="NiP-hk-ymo" firstAttribute="leading" secondItem="xl8-Pz-KWv" secondAttribute="leading" constant="68" id="RRY-Nn-hUg"/>
                 <constraint firstItem="Dsz-xu-HpH" firstAttribute="leading" secondItem="xl8-Pz-KWv" secondAttribute="leading" constant="24" id="U5e-nr-IFf"/>
+                <constraint firstItem="xl8-Pz-KWv" firstAttribute="bottom" secondItem="VuF-gh-VO2" secondAttribute="bottom" id="WrG-Em-NHI"/>
+                <constraint firstItem="VuF-gh-VO2" firstAttribute="leading" secondItem="xl8-Pz-KWv" secondAttribute="leading" id="cBt-WQ-O8B"/>
                 <constraint firstItem="xl8-Pz-KWv" firstAttribute="trailing" secondItem="ZH4-dg-0oD" secondAttribute="trailing" id="lPD-WU-Mwb"/>
+                <constraint firstItem="xl8-Pz-KWv" firstAttribute="trailing" secondItem="VuF-gh-VO2" secondAttribute="trailing" id="u9F-SK-QZv"/>
                 <constraint firstItem="xl8-Pz-KWv" firstAttribute="trailing" secondItem="Dsz-xu-HpH" secondAttribute="trailing" constant="24" id="v9D-Wg-UpA"/>
                 <constraint firstItem="NiP-hk-ymo" firstAttribute="top" secondItem="xl8-Pz-KWv" secondAttribute="top" id="wz5-ws-tME"/>
                 <constraint firstAttribute="bottom" secondItem="IBH-IH-oWz" secondAttribute="bottom" id="x1B-VP-J8h"/>

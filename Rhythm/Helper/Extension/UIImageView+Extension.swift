@@ -21,6 +21,11 @@ extension UIImageView {
         layer.addSublayer(gradientLayer)
     }
     
+    func addStroke() {
+        self.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
+        self.layer.borderWidth = 1
+    }
+    
     func loadImage(from urlString: String) {
         if let url = URL(string: urlString) {
             DispatchQueue.main.async {

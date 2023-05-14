@@ -28,15 +28,13 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        
     }
     
     func configure(track: TracksDatum) {
-        
         self.track = track
         
-        let manager = CoreDataManager.shared
-        favorites = manager.fetchFavorites()
+        let coreDataManager = CoreDataManager.shared
+        favorites = coreDataManager.fetchFavorites()
         
         if let foundFavorite = favorites.first(where: { $0.id == track.id }) {
             self.foundFavorite = foundFavorite
@@ -57,7 +55,7 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
         if foundFavorite != nil {
             coreDataManager.deleteFavorite(favorite: foundFavorite!)
         } else {
-            coreDataManager.saveFavorite(id: track.id, name: track.title, image: track.album.coverBig, link: track.preview, duration: track.duration)
+            coreDataManager.saveFavorite(id: track.id, trackName: track.title, artistName: track.artist.name, image: track.album.coverBig, link: track.preview, duration: track.duration)
         }
         delegate?.didTapIconInCell(self)
         

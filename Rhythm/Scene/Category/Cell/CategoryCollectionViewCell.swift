@@ -16,8 +16,7 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        imageView.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
-        imageView.layer.borderWidth = 1
+        imageView.addStroke()
         let screenWidth = UIScreen.main.bounds.width
         let width = (screenWidth - 48 - 16) / 2
         let height = width
