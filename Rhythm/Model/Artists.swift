@@ -21,7 +21,7 @@ struct ArtistsDatum: Codable {
     let radio: Bool
     let tracklist: String
     let type: TypeEnumArtists
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, picture
         case pictureSmall = "picture_small"

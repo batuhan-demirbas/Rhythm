@@ -8,9 +8,9 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    @IBOutlet var messageLabel: UILabel!
-    @IBOutlet var searchField: UITextField!
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet private var messageLabel: UILabel!
+    @IBOutlet private var searchField: UITextField!
+    @IBOutlet private var collectionView: UICollectionView!
     
     var viewModel: HomeViewModelProtocol! {
         didSet {
@@ -57,7 +57,7 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.numberOfItems
-    }
+    } 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeCollectionViewCell

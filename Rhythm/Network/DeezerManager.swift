@@ -15,7 +15,7 @@ protocol DeezerManagerProtocol {
     func getAlbum(albumId: Int, complete: @escaping((Album?, Error?)->()))
 }
 
-class DeezerManager: DeezerManagerProtocol {
+final class DeezerManager: DeezerManagerProtocol {
     static let shared = DeezerManager()
     
     func getGenres(complete: @escaping((Genre?, Error?)->())) {

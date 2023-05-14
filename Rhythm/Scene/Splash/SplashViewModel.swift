@@ -22,11 +22,11 @@ final class SplashViewModel {
     let manager = DeezerManager.shared
     weak var delegate: SplashViewModelDelegate?
     var genres: [GenreDatum] = []
-
+    
     var isLoading: Bool = false
     var errorCallback: ((String) -> Void)?
     var successCallback: (() -> Void)?
-
+    
     private func fetchGenres() {
         manager.getGenres { [weak self] result, error in
             guard let result = result else { return }
@@ -46,7 +46,7 @@ extension SplashViewModel: SplashViewModelProtocol {
     var numberOfItems: Int {
         genres.count
     }
-
+    
     func load() {
         fetchGenres()
     }

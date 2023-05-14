@@ -37,7 +37,7 @@ final class ArtistViewModel {
     init(artistId: Int) {
         self.artistId = artistId
     }
-
+    
     private func fetchArtist(artistId: Int) {
         manager.getArtist(artistId: artistId) { [weak self] result, error in
             guard let result = result else { return }

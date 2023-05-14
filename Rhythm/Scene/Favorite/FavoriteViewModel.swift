@@ -34,14 +34,14 @@ final class FavoriteViewModel {
     private func removeFavorites(favorite: Favorites) {
         manager.deleteFavorite(favorite: favorite)
     }
-
+    
 }
 
 extension FavoriteViewModel: FavoriteViewModelProtocol {
     var numberOfItems: Int {
         favorites.count
     }
-
+    
     func load() {
         fetchFavorites()
         delegate?.prepareCollectionView()

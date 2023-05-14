@@ -11,11 +11,11 @@ protocol AlbumCollectionViewCellDelegate: AnyObject {
     func didTapIconInCell(_ cell: AlbumCollectionViewCell)
 }
 
-class AlbumCollectionViewCell: UICollectionViewCell {
+final class AlbumCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var trackNameLabel: UILabel!
-    @IBOutlet weak var trackDuration: UILabel!
-    @IBOutlet weak var favIcon: UIImageView!
+    @IBOutlet private weak var trackNameLabel: UILabel!
+    @IBOutlet private weak var trackDuration: UILabel!
+    @IBOutlet private weak var favIcon: UIImageView!
     
     static let reuseIdentifier: String = "AlbumCollectionViewCell"
     weak var delegate: AlbumCollectionViewCellDelegate?

@@ -17,7 +17,7 @@ struct Artist: Codable {
     let radio: Bool
     let tracklist: String
     let type: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, link, share, picture
         case pictureSmall = "picture_small"

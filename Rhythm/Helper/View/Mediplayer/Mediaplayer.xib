@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Bold.otf">
+            <string>Satoshi-Bold</string>
+        </array>
+        <array key="Satoshi-Medium.otf">
+            <string>Satoshi-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mediaplayer" customModule="Rhythm" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="bG4-41-qGw" id="X0b-uP-qTJ"/>
+                <outlet property="imageView" destination="b7G-u3-2s3" id="Ens-XQ-sDz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="Mediaplayer" id="bG4-41-qGw">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="k1v-v4-Q8D">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OTG-yM-8xt">
+                    <rect key="frame" x="24" y="16" width="327" height="70"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="13W-2m-FWx">
+                            <rect key="frame" x="0.0" y="0.0" width="327" height="57.333333333333336"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="genre" translatesAutoresizingMaskIntoConstraints="NO" id="b7G-u3-2s3">
+                                    <rect key="frame" x="0.0" y="8.6666666666666679" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="afT-n0-Khd"/>
+                                        <constraint firstAttribute="width" constant="40" id="jqA-Pm-anr"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qo8-hM-4DI">
+                                    <rect key="frame" x="56" y="11.333333333333332" width="231" height="35"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-mt-IZX">
+                                            <rect key="frame" x="0.0" y="0.0" width="231" height="20"/>
+                                            <fontDescription key="fontDescription" name="Satoshi-Bold" family="Satoshi" pointSize="16"/>
+                                            <color key="textColor" name="text.primary"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="b1_bold"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-Eo-0I5">
+                                            <rect key="frame" x="0.0" y="20.000000000000004" width="231" height="14.999999999999996"/>
+                                            <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="12"/>
+                                            <color key="textColor" name="text.secondry"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="b3_medium"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pause" translatesAutoresizingMaskIntoConstraints="NO" id="ECU-yx-cjr">
+                                    <rect key="frame" x="303" y="16.666666666666664" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="2P5-xA-kXa"/>
+                                        <constraint firstAttribute="height" constant="24" id="Jt1-JM-zhy"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KN1-aP-wEN">
+                            <rect key="frame" x="0.0" y="57.333333333333329" width="327" height="12.666666666666671"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk2-7f-gVv">
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="12.666666666666666"/>
+                                    <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="10"/>
+                                    <color key="textColor" name="text.secondry"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="b4_medium"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7Wj-WN-Ctx"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="k1v-v4-Q8D" secondAttribute="bottom" id="2EB-Ic-nWq"/>
+                <constraint firstItem="OTG-yM-8xt" firstAttribute="top" secondItem="bG4-41-qGw" secondAttribute="top" constant="16" id="57P-hr-d1X"/>
+                <constraint firstAttribute="bottom" secondItem="OTG-yM-8xt" secondAttribute="bottom" constant="16" id="BUu-CR-zhK"/>
+                <constraint firstItem="OTG-yM-8xt" firstAttribute="leading" secondItem="7Wj-WN-Ctx" secondAttribute="leading" constant="24" id="FC6-sW-cUd"/>
+                <constraint firstItem="k1v-v4-Q8D" firstAttribute="top" secondItem="bG4-41-qGw" secondAttribute="top" id="Lpj-Q3-A96"/>
+                <constraint firstItem="7Wj-WN-Ctx" firstAttribute="trailing" secondItem="OTG-yM-8xt" secondAttribute="trailing" constant="24" id="TaW-0Q-0U9"/>
+                <constraint firstItem="7Wj-WN-Ctx" firstAttribute="trailing" secondItem="k1v-v4-Q8D" secondAttribute="trailing" id="YYd-Cs-Ag4"/>
+                <constraint firstItem="k1v-v4-Q8D" firstAttribute="leading" secondItem="bG4-41-qGw" secondAttribute="leading" id="oYG-mx-BSd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-257.25190839694653" y="-195.07042253521126"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="375" height="812"/>
+        <image name="genre" width="1000" height="1000"/>
+        <image name="pause" width="24" height="24"/>
+        <namedColor name="text.primary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text.secondry">
+            <color red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

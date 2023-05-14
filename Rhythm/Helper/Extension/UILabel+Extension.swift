@@ -19,7 +19,7 @@ protocol XIBLocalizable {
             text = newValue?.localized
         }
     }
-
+    
     @IBInspectable var fontStyle: String {
         get {
             return font.fontName
@@ -80,16 +80,16 @@ protocol XIBLocalizable {
             }
         }
     }
-
+    
     private func setTypographyStyle(_ style: Typography.FontStyle) {
         let paragraphStyle = NSMutableParagraphStyle()
-
+        
         let attributedString = NSMutableAttributedString(string: text ?? "", attributes: [
             .font: style.font,
             .paragraphStyle: paragraphStyle
         ])
-
+        
         attributedText = attributedString
     }
-
+    
 }

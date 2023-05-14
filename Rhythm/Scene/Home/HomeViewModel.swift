@@ -28,7 +28,7 @@ final class HomeViewModel {
     init(genres: [GenreDatum]) {
         self.genres = genres
     }
-
+    
     var isLoading: Bool = false
     var errorCallback: ((String) -> Void)?
     var successCallback: (() -> Void)?
@@ -39,7 +39,7 @@ extension HomeViewModel: HomeViewModelProtocol {
     var numberOfItems: Int {
         genres.count
     }
-
+    
     func load() {
         delegate?.prepareCollectionView()
         delegate?.prepareViews()

@@ -7,24 +7,24 @@
 
 import UIKit
 
-class ArtistViewController: UIViewController {
+final class ArtistViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var followersLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var followersLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     var viewModel: ArtistViewModelProtocol! {
         didSet {
             viewModel.delegate = self
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.load()
     }
-
+    
 }
 
 extension ArtistViewController: ArtistViewModelDelegate {
@@ -39,7 +39,7 @@ extension ArtistViewController: ArtistViewModelDelegate {
     func prepareCollectionView() {
         collectionView.register(UINib.loadNib(name: ArtistCollectionViewCell.reuseIdentifier), forCellWithReuseIdentifier: ArtistCollectionViewCell.reuseIdentifier)
     }
-
+    
     func reloadData() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
@@ -63,7 +63,7 @@ extension ArtistViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.numberOfItems
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArtistCollectionViewCell.reuseIdentifier, for: indexPath) as! ArtistCollectionViewCell
         cell.configure(album: viewModel.albums[indexPath.row])

@@ -8,8 +8,8 @@
 import UIKit
 
 final class FavoriteViewController: UIViewController {
-    @IBOutlet var label: UILabel!
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet private var label: UILabel!
+    @IBOutlet private var collectionView: UICollectionView!
     
     var viewModel: FavoriteViewModelProtocol! {
         didSet {

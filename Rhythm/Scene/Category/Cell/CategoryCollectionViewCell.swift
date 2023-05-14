@@ -7,13 +7,13 @@
 
 import UIKit
 
-class CategoryCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var label: UILabel!
-
+final class CategoryCollectionViewCell: UICollectionViewCell {
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var label: UILabel!
+    
     static let reuseIdentifier: String = "CategoryCollectionViewCell"
     var artist: ArtistsDatum?
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,7 +25,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         imageView.addLinearGradient(width: width, height: height, alpha: 0.85)
         
     }
-
+    
     func configure() {
         guard let artist = artist else { return }
         imageView.loadImage(from: artist.pictureBig)

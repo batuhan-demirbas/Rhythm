@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ArtistCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var yearLabel: UILabel!
+final class ArtistCollectionViewCell: UICollectionViewCell {
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var yearLabel: UILabel!
     
     static let reuseIdentifier: String = "ArtistCollectionViewCell"
     

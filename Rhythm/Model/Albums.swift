@@ -26,7 +26,7 @@ struct Datum: Codable {
     let tracklist: String
     let explicitLyrics: Bool
     let type: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id, title, link, cover
         case coverSmall = "cover_small"

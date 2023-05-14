@@ -40,6 +40,9 @@
 		D58FC2382A0D3C0700FF666D /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D58FC2362A0D3C0700FF666D /* Database.xcdatamodeld */; };
 		D58FC23B2A0D4C1100FF666D /* FavoritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC2392A0D4C1100FF666D /* FavoritesCollectionViewCell.swift */; };
 		D58FC23C2A0D4C1100FF666D /* FavoritesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58FC23A2A0D4C1100FF666D /* FavoritesCollectionViewCell.xib */; };
+		D5C2E8E82A1032CB002C2016 /* Mediaplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2E8E72A1032CB002C2016 /* Mediaplayer.swift */; };
+		D5C2E8EB2A10344E002C2016 /* Mediaplayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C2E8EA2A10344E002C2016 /* Mediaplayer.xib */; };
+		D5C2E8EF2A10B794002C2016 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2E8EE2A10B794002C2016 /* BaseViewController.swift */; };
 		D5DD58372A0908980058BA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58362A0908980058BA23 /* AppDelegate.swift */; };
 		D5DD58392A0908980058BA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DD58382A0908980058BA23 /* SceneDelegate.swift */; };
 		D5DD583E2A0908980058BA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DD583C2A0908980058BA23 /* Main.storyboard */; };
@@ -105,6 +108,9 @@
 		D58FC2372A0D3C0700FF666D /* FavoritesEntity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoritesEntity.xcdatamodel; sourceTree = "<group>"; };
 		D58FC2392A0D4C1100FF666D /* FavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D58FC23A2A0D4C1100FF666D /* FavoritesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesCollectionViewCell.xib; sourceTree = "<group>"; };
+		D5C2E8E72A1032CB002C2016 /* Mediaplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediaplayer.swift; sourceTree = "<group>"; };
+		D5C2E8EA2A10344E002C2016 /* Mediaplayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Mediaplayer.xib; sourceTree = "<group>"; };
+		D5C2E8EE2A10B794002C2016 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D5DD58332A0908980058BA23 /* Rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DD58362A0908980058BA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5DD58382A0908980058BA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +175,15 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		D5C2E8E92A1032CF002C2016 /* Mediplayer */ = {
+			isa = PBXGroup;
+			children = (
+				D5C2E8E72A1032CB002C2016 /* Mediaplayer.swift */,
+				D5C2E8EA2A10344E002C2016 /* Mediaplayer.xib */,
+			);
+			path = Mediplayer;
+			sourceTree = "<group>";
+		};
 		D5DD582A2A0908980058BA23 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +245,7 @@
 		D5DD584C2A0909FB0058BA23 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D5C2E8EE2A10B794002C2016 /* BaseViewController.swift */,
 				D5DD588B2A0989AB0058BA23 /* Splash */,
 				D5DD585A2A0918B20058BA23 /* Home */,
 				D5DD585C2A0918D60058BA23 /* Category */,
@@ -254,6 +270,7 @@
 		D5DD584E2A090A210058BA23 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D5C2E8E92A1032CF002C2016 /* Mediplayer */,
 				D53046A62A0A6F5C0007662C /* SearchField.swift */,
 				D51034662A0AA2A200C1A624 /* TabBar.swift */,
 			);
@@ -471,6 +488,7 @@
 				D5232D122A0BF50C000C098A /* Satoshi-Black.otf in Resources */,
 				D5232D152A0BF50C000C098A /* Satoshi-Medium.otf in Resources */,
 				D53046942A0A5AEF0007662C /* Icon.xcassets in Resources */,
+				D5C2E8EB2A10344E002C2016 /* Mediaplayer.xib in Resources */,
 				D52BB8D32A1014670017851B /* AlbumCollectionViewCell.xib in Resources */,
 				D5DD58432A09089A0058BA23 /* LaunchScreen.storyboard in Resources */,
 				D5232D2B2A0C3F04000C098A /* ArtistCollectionViewCell.xib in Resources */,
@@ -506,6 +524,7 @@
 				D5DD588A2A092EB80058BA23 /* Album.swift in Sources */,
 				D53046A52A0A68CB0007662C /* UIImageView+Extension.swift in Sources */,
 				D5232D2A2A0C3F04000C098A /* ArtistCollectionViewCell.swift in Sources */,
+				D5C2E8EF2A10B794002C2016 /* BaseViewController.swift in Sources */,
 				D530468D2A0A59980007662C /* HomeCollectionViewCell.swift in Sources */,
 				D5DD58692A0923990058BA23 /* ArtistViewController.swift in Sources */,
 				D5DD58392A0908980058BA23 /* SceneDelegate.swift in Sources */,
@@ -514,6 +533,7 @@
 				D5DD586D2A0923F10058BA23 /* AlbumViewController.swift in Sources */,
 				D51034672A0AA2A200C1A624 /* TabBar.swift in Sources */,
 				D58FC2382A0D3C0700FF666D /* Database.xcdatamodeld in Sources */,
+				D5C2E8E82A1032CB002C2016 /* Mediaplayer.swift in Sources */,
 				D5DD58622A091A1B0058BA23 /* HomeViewModel.swift in Sources */,
 				D5DD58802A0928550058BA23 /* DeezerManager.swift in Sources */,
 				D5DD58642A09231E0058BA23 /* CategoryViewController.swift in Sources */,

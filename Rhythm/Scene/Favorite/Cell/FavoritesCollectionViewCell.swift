@@ -11,11 +11,11 @@ protocol FavoritesCollectionViewCellDelegate: AnyObject {
     func didTapIconInCell(_ cell: FavoritesCollectionViewCell)
 }
 
-class FavoritesCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var iconImageView: UIImageView!
+final class FavoritesCollectionViewCell: UICollectionViewCell {
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var durationLabel: UILabel!
+    @IBOutlet private var iconImageView: UIImageView!
     
     static let reuseIdentifier: String = "FavoritesCollectionViewCell"
     weak var delegate: FavoritesCollectionViewCellDelegate?

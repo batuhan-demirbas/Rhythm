@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GreetingManager {
+final class GreetingManager {
     static func getGreetingMessage() -> String {
         let date = Date()
         let hours = Calendar.current.component(.hour, from: date)

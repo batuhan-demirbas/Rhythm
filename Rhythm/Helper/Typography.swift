@@ -7,12 +7,12 @@
 
 import UIKit
 
-class Typography {
-
+final class Typography {
+    
     struct FontStyle {
         let font: UIFont
     }
-
+    
     static let h1_black = FontStyle(font: UIFont(name: "Satoshi-Black", size: 48)!)
     static let h1_regular = FontStyle(font: UIFont(name: "Satoshi-Regular", size: 48)!)
     
@@ -39,7 +39,7 @@ class Typography {
     
     static let b4_bold = FontStyle(font: UIFont(name: "Satoshi-Bold", size: 10)!)
     static let b4_medium = FontStyle(font: UIFont(name: "Satoshi-Medium", size: 10)!)
-
+    
 }
 
 enum FontStyles: String {

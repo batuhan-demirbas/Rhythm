@@ -7,14 +7,14 @@
 
 import UIKit
 
-class TabBar: UITabBar {
-
+final class TabBar: UITabBar {
+    
     let topLineColor = UIColor(named: "stroke.border")
     let topLineWidth: CGFloat = 1.0
-
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-
+        
         topLineColor?.setStroke()
         let topLinePath = UIBezierPath()
         topLinePath.lineWidth = topLineWidth

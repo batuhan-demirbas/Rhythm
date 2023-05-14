@@ -29,7 +29,7 @@ final class CategoryViewModel {
     init(genre: GenreDatum) {
         self.genre = genre
     }
-
+    
     var isLoading: Bool = false
     var errorCallback: ((String) -> Void)?
     var successCallback: (() -> Void)?
@@ -46,7 +46,7 @@ final class CategoryViewModel {
             }
         }
     }
-
+    
 }
 
 extension CategoryViewModel: CategoryViewModelProtocol {
@@ -57,7 +57,7 @@ extension CategoryViewModel: CategoryViewModelProtocol {
     var genreName: String {
         genre?.name ?? ""
     }
-
+    
     func load() {
         delegate?.prepareCollectionView()
         fetchArtists(genreId: genre?.id ?? 0)

@@ -20,7 +20,7 @@ extension UIImageView {
         gradientLayer.frame = CGRect(x: 0, y: 0, width: width, height: height)
         layer.addSublayer(gradientLayer)
     }
-
+    
     func loadImage(from urlString: String) {
         if let url = URL(string: urlString) {
             DispatchQueue.main.async {

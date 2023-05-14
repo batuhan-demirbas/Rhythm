@@ -9,11 +9,11 @@ import UIKit
 import SkeletonView
 
 class HomeCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var label: UILabel!
-
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var label: UILabel!
+    
     static let reuseIdentifier: String = "HomeCollectionViewCell"
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,7 +25,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         imageView.addLinearGradient(width: width, height: height, alpha: 0.85)
         
     }
-
+    
     func configure(genre: GenreDatum) {
         imageView.loadImage(from: genre.pictureBig)
         label.text = genre.name

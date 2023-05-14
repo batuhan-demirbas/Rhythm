@@ -19,7 +19,7 @@ struct GenreDatum: Codable {
     let picture: String
     let pictureSmall, pictureMedium, pictureBig, pictureXl: String
     let type: TypeEnum
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, picture
         case pictureSmall = "picture_small"

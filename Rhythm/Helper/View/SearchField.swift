@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class SearchField: UITextField {
+final class SearchField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()

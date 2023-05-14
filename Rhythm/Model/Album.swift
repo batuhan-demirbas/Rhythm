@@ -29,7 +29,7 @@ struct Album: Codable {
     let artist: ArtistDetail
     let type: String
     let tracks: Tracks
-
+    
     enum CodingKeys: String, CodingKey {
         case id, title, upc, link, share, cover
         case coverSmall = "cover_small"
@@ -59,7 +59,7 @@ struct ArtistDetail: Codable {
     let pictureSmall, pictureMedium, pictureBig, pictureXl: String
     let tracklist: String
     let type: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, picture
         case pictureSmall = "picture_small"
@@ -80,7 +80,7 @@ struct Contributor: Codable {
     let tracklist: String
     let type: String
     let role: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, link, share, picture
         case pictureSmall = "picture_small"
@@ -124,7 +124,7 @@ struct TracksDatum: Codable {
     let artist: ArtistElement
     let album: AlbumClass
     let type: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id, readable, title
         case titleShort = "title_short"
@@ -148,7 +148,7 @@ struct AlbumClass: Codable {
     let md5Image: String
     let tracklist: String
     let type: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id, title, cover
         case coverSmall = "cover_small"

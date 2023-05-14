@@ -13,7 +13,7 @@ enum ErrorTypes: String, Error {
     case generalError = "An error happened"
 }
 
-class NetworkHelper {
+final class NetworkHelper {
     static let shared = NetworkHelper()
     
     var baseURL = "https://api.deezer.com"
