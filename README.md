@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./asset/banner.png" alt="Uygulama reklam görseli" />
+  <img src="./Asset/banner.png" alt="Uygulama reklam görseli" />
 </div>
 
 ## İçindekiler
@@ -25,15 +25,15 @@ Rhythm projesinin her aşaması, geliştirme sürecinden tasarıma kadar, Notion
 Notion üzerinde projenin geliştirme sürecini ve takibi görmek için [buraya](https://rhythm-app.notion.site/490696bc3e864f239ca9bcb1bc95c85f?v=0c346faa516c4296995aadd2d865e6ab) tıklayabilirsiniz.
 
 <div align="center">
-  <img src="./asset/notion.png" alt="Proje Yönetimi Görseli" />
+  <img src="./Asset/notion.png" alt="Proje Yönetimi Görseli" />
 </div>
 
 ## Önizlemeler
 | Başlangıç Ekranı  | Ana Ekran | Favoriler Ekranı| 
 | ------------- |:-------------:| :-------------:|
-| ![Önizleme](asset/splash.png) | ![Önizleme](asset/home.png) | ![Önizleme](asset/favorites.png) |
+| ![Önizleme](Asset/splash.png) | ![Önizleme](Asset/home.png) | ![Önizleme](Asset/favorites.png) |
 | Kategori Ekranı |Sanatçı Ekranı | Albüm Ekranı |
-| ![Önizleme](asset/category.png) | ![Önizleme](asset/artist.png) | ![Önizleme](asset/album.png) |
+| ![Önizleme](Asset/category.png) | ![Önizleme](Asset/artist.png) | ![Önizleme](Asset/album.png) |
 
 ## Backend
-Bu uygulamanın arka uç hizmetleri tamamen başka bir kişi tarafından geliştirilmiştir ve bu [link](https://rickandmortyapi.com/) üzerinden görüntülenebilir. Kullanım kolaylığı için Postman'a aktardım.
+Bu uygulamanın arka uç hizmetleri tamamen başka bir kişi tarafından geliştirilmiştir ve bu [link](https://developers.deezer.com/api) üzerinden görüntülenebilir. Kullanım kolaylığı için Postman'a aktardım.
