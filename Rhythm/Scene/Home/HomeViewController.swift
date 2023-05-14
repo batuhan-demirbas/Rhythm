@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: BaseViewController {
     @IBOutlet private var messageLabel: UILabel!
     @IBOutlet private var searchField: UITextField!
     @IBOutlet private var collectionView: UICollectionView!
@@ -45,12 +45,10 @@ extension HomeViewController: HomeViewModelDelegate {
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let viewModel = CategoryViewModel(genre: viewModel.genres[indexPath.row])
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController else {
-            return
-        }
+        let viewController = CategoryViewController(nibName: "CategoryViewController", bundle: nil)
         viewController.viewModel = viewModel
         navigationController?.pushViewController(viewController, animated: true)
+
     }
 }
 

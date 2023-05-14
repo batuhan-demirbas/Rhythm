@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FavoriteViewController: UIViewController {
+final class FavoriteViewController: BaseViewController {
     @IBOutlet private var label: UILabel!
     @IBOutlet private var collectionView: UICollectionView!
     

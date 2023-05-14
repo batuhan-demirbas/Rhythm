@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CategoryViewController: UIViewController {
+final class CategoryViewController: BaseViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -20,7 +20,6 @@ final class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.load()
-        
     }
     
 }
@@ -41,10 +40,7 @@ extension CategoryViewController: CategoryViewModelDelegate {
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let viewModel = ArtistViewModel(artistId: viewModel.artists[indexPath.row].id)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ArtistViewController") as? ArtistViewController else {
-            return
-        }
+        let viewController = ArtistViewController(nibName: "ArtistViewController", bundle: nil)
         viewController.viewModel = viewModel
         navigationController?.pushViewController(viewController, animated: true)
     }

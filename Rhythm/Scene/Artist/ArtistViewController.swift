@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ArtistViewController: UIViewController {
+final class ArtistViewController: BaseViewController {
     
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
@@ -50,10 +50,7 @@ extension ArtistViewController: ArtistViewModelDelegate {
 extension ArtistViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let viewModel = AlbumViewModel(albumId: viewModel.albums[indexPath.row].id)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AlbumViewController") as? AlbumViewController else {
-            return
-        }
+        let viewController = AlbumViewController(nibName: "AlbumViewController", bundle: nil)
         viewController.viewModel = viewModel
         navigationController?.pushViewController(viewController, animated: true)
     }
