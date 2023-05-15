@@ -22,7 +22,7 @@ extension UIImageView {
     }
     
     func addStroke() {
-        self.layer.borderColor = UIColor(named: "stroke.border")?.cgColor
+        self.layer.borderColor = UIColor.border.cgColor
         self.layer.borderWidth = 1
     }
     

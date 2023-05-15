@@ -25,23 +25,23 @@ final class SearchField: UITextField {
     }
     
     private func configure() {
-        layer.borderColor = UIColor(named: "stroke.border")?.cgColor
+        layer.borderColor = UIColor.border.cgColor
         layer.borderWidth = 1
         layer.cornerRadius = 0
-        tintColor = UIColor(named: "main.primary")
+        tintColor = UIColor.primary
         backgroundColor = UIColor.clear
-        attributedPlaceholder = NSAttributedString(string: "Search album or artist", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "text.secondry")!])
+        attributedPlaceholder = NSAttributedString(string: "Search album or artist", attributes: [NSAttributedString.Key.foregroundColor: UIColor.text_secondry])
         
         changeIconImage(named: "search")
     }
     
     func didBeginEditingSettings() {
-        layer.borderColor = UIColor(named: "text.secondry")?.cgColor
+        layer.borderColor = UIColor.text_secondry.cgColor
         changeIconImage(named: "search.fill")
     }
     
     func didEndEditingSettings() {
-        layer.borderColor = UIColor(named: "stroke.border")?.cgColor
+        layer.borderColor = UIColor.border.cgColor
         changeIconImage(named: "search")
     }
     

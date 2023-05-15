@@ -57,10 +57,10 @@ extension CategoryViewController: CategoryViewModelDelegate {
     func prepareViews() {
         self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "back")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "back")
-        self.navigationController?.navigationBar.tintColor = UIColor(named: "text.primary")
+        self.navigationController?.navigationBar.tintColor = UIColor.text_primary
         
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor(named: "text.primary") ?? UIColor.black,
+            NSAttributedString.Key.foregroundColor: UIColor.text_primary ,
             NSAttributedString.Key.font: UIFont(name: "Satoshi-Bold", size: 20) ?? UIFont.systemFont(ofSize: 20)
         ]
         

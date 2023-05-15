@@ -40,6 +40,7 @@
 		D58FC2382A0D3C0700FF666D /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D58FC2362A0D3C0700FF666D /* Database.xcdatamodeld */; };
 		D58FC23B2A0D4C1100FF666D /* FavoritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC2392A0D4C1100FF666D /* FavoritesCollectionViewCell.swift */; };
 		D58FC23C2A0D4C1100FF666D /* FavoritesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58FC23A2A0D4C1100FF666D /* FavoritesCollectionViewCell.xib */; };
+		D5B650892A121AF30034DC61 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B650882A121AF30034DC61 /* UIColor+Extension.swift */; };
 		D5C2E8EF2A10B794002C2016 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2E8EE2A10B794002C2016 /* BaseViewController.swift */; };
 		D5C2E8F12A10BDC9002C2016 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2E8F02A10BDC9002C2016 /* UICollectionView+Extension.swift */; };
 		D5C2E8F82A10C8C4002C2016 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2E8F62A10C8C4002C2016 /* CategoryViewController.swift */; };
@@ -111,6 +112,7 @@
 		D58FC2372A0D3C0700FF666D /* FavoritesEntity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoritesEntity.xcdatamodel; sourceTree = "<group>"; };
 		D58FC2392A0D4C1100FF666D /* FavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D58FC23A2A0D4C1100FF666D /* FavoritesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesCollectionViewCell.xib; sourceTree = "<group>"; };
+		D5B650882A121AF30034DC61 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D5C2E8EE2A10B794002C2016 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D5C2E8F02A10BDC9002C2016 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		D5C2E8F62A10C8C4002C2016 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				D53046AA2A0A87970007662C /* UILabel+Extension.swift */,
 				D5674F7F2A0E503B00050BC6 /* UITextField+Extension.swift */,
 				D5C2E8F02A10BDC9002C2016 /* UICollectionView+Extension.swift */,
+				D5B650882A121AF30034DC61 /* UIColor+Extension.swift */,
 				D572B64A2A0E22DD00B2F226 /* Int+Extension.swift */,
 				D5674F7D2A0E481A00050BC6 /* String+Extension.swift */,
 			);
@@ -539,6 +542,7 @@
 				D530468D2A0A59980007662C /* HomeCollectionViewCell.swift in Sources */,
 				D53046A72A0A6F5C0007662C /* SearchField.swift in Sources */,
 				D58FC23B2A0D4C1100FF666D /* FavoritesCollectionViewCell.swift in Sources */,
+				D5B650892A121AF30034DC61 /* UIColor+Extension.swift in Sources */,
 				D51034672A0AA2A200C1A624 /* TabBar.swift in Sources */,
 				D58FC2382A0D3C0700FF666D /* Database.xcdatamodeld in Sources */,
 				D5C2E9002A10D532002C2016 /* AlbumViewController.swift in Sources */,
@@ -734,7 +738,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -768,7 +772,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

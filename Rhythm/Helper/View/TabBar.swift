@@ -9,7 +9,7 @@ import UIKit
 
 final class TabBar: UITabBar {
     
-    let topLineColor = UIColor(named: "stroke.border")
+    let topLineColor = UIColor.border
     let topLineWidth: CGFloat = 1.0
     var isTopLineVisible = true
     
@@ -17,7 +17,7 @@ final class TabBar: UITabBar {
         super.draw(rect)
         
         if isTopLineVisible {
-            topLineColor?.setStroke()
+            topLineColor.setStroke()
             let topLinePath = UIBezierPath()
             topLinePath.lineWidth = topLineWidth
             
