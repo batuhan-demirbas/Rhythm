@@ -61,7 +61,7 @@ class AudioPlayerView: UIView {
         self.trackLabel.text = track.title
         self.artistLabel.text = track.artist.name
         self.isHidden = false
-        self.playIcon.image = UIImage(named: "pause")
+        self.playIcon.image = UIImage.pause
         
     }
     
@@ -70,18 +70,18 @@ class AudioPlayerView: UIView {
         self.trackLabel.text = track.trackName
         self.artistLabel.text = track.artistName
         self.isHidden = false
-        self.playIcon.image = UIImage(named: "pause")
+        self.playIcon.image = UIImage.pause
         
     }
     
     @objc func didTapPlayButton() {
         switch buttonState {
         case false:
-            playIcon.image = UIImage(named: "pause")
+            playIcon.image = UIImage.pause
             delegate?.didTappedPlayButton()
             buttonState = true
         case true:
-            playIcon.image = UIImage(named: "play")
+            playIcon.image = UIImage.play
             delegate?.didTappedPauseButton()
             buttonState = false
         }

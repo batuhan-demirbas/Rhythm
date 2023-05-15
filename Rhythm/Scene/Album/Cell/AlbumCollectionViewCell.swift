@@ -37,9 +37,9 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
         
         if let foundFavorite = favorites.first(where: { $0.id == track.id }) {
             self.foundFavorite = foundFavorite
-            favIcon.image = UIImage(named: "heart.fill")
+            favIcon.image = UIImage.heart_fill
         } else {
-            favIcon.image = UIImage(named: "heart")
+            favIcon.image = UIImage.heart
         }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapIcon))

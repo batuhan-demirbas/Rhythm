@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -42,43 +43,29 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dsz-xu-HpH">
-                    <rect key="frame" x="24" y="336" width="345" height="54"/>
+                    <rect key="frame" x="24" y="336" width="345" height="50"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tHh-Up-kuz">
-                            <rect key="frame" x="0.0" y="0.0" width="291" height="54"/>
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Album Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zd-nI-9gK">
-                                    <rect key="frame" x="0.0" y="0.0" width="291" height="34"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
                                     <fontDescription key="fontDescription" name="Satoshi-Bold" family="Satoshi" pointSize="24"/>
                                     <color key="textColor" name="text.primary"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name • 0 Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfG-id-xup">
-                                    <rect key="frame" x="0.0" y="34" width="291" height="20"/>
+                                    <rect key="frame" x="0.0" y="30" width="345" height="20"/>
                                     <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="16"/>
                                     <color key="textColor" name="text.secondry"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hll-Fp-qhj">
-                            <rect key="frame" x="291" y="0.0" width="54" height="54"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="hll-Fp-qhj" secondAttribute="height" multiplier="1:1" id="9QZ-Sz-S26"/>
-                                <constraint firstAttribute="height" constant="54" id="x0s-te-6dn"/>
-                            </constraints>
-                            <color key="tintColor" name="main.primary"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" image="play">
-                                <backgroundConfiguration key="background" cornerRadius="27">
-                                    <color key="backgroundColor" name="main.primary"/>
-                                </backgroundConfiguration>
-                            </buttonConfiguration>
-                        </button>
                     </subviews>
                 </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZH4-dg-0oD">
-                    <rect key="frame" x="0.0" y="414" width="393" height="404"/>
+                    <rect key="frame" x="0.0" y="410" width="393" height="408"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I6A-HW-xa8">
                         <size key="itemSize" width="327" height="44"/>
@@ -128,10 +115,6 @@
     <resources>
         <image name="background" width="375" height="812"/>
         <image name="genre" width="1000" height="1000"/>
-        <image name="play" width="24" height="24"/>
-        <namedColor name="main.primary">
-            <color red="0.20784313725490197" green="0.24313725490196078" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="text.primary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

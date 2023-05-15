@@ -58,8 +58,8 @@ extension CategoryViewController: UITextFieldDelegate {
 
 extension CategoryViewController: CategoryViewModelDelegate {
     func prepareViews() {
-        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "back")
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "back")
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage.back
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage.back
         self.navigationController?.navigationBar.tintColor = UIColor.text_primary
         
         self.navigationController?.navigationBar.titleTextAttributes = [
