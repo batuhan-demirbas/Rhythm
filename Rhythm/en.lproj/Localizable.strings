@@ -11,7 +11,8 @@
 "home_title_afternoon" = "Good Afternoon,";
 "home_title_night" = "Good Night,";
 "home_description" = "Explore new songs!";
-"home_search_placeholder" = "Search artist...";
+"home_search_placeholder" = "Search category...";
+"category_search_placeholder" = "Search artist...";
 "artist_followers" = " followers";
 "artist_collectionview_title" = "Albums";
 "favroite_title" = "Favorite Songs";

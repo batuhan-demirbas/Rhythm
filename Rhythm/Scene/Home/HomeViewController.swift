@@ -28,6 +28,7 @@ final class HomeViewController: BaseViewController {
 
 extension HomeViewController: HomeViewModelDelegate {
     func prepareViews() {
+        searchField.delegate = self
         messageLabel.text = GreetingManager.getGreetingMessage()
     }
     
@@ -42,9 +43,36 @@ extension HomeViewController: HomeViewModelDelegate {
     }
 }
 
+extension HomeViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let searchText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
+            viewModel.filterGenre(searchText: searchText)
+        }
+        
+        collectionView.reloadData()
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        //viewModel.filteredGenres = viewModel.genres
+        collectionView.reloadData()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        (textField as! SearchField).didBeginEditingSettings()
+        hideKeyboardWhenTappedAround()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        (textField as! SearchField).didEndEditingSettings()
+    }
+    
+}
+
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedGenre = viewModel.genres[indexPath.row]
+        let selectedGenre = viewModel.filteredGenres[indexPath.row]
         let viewModel = CategoryViewModel(genre: selectedGenre)
         let viewController = CategoryViewController(nibName: "CategoryViewController", bundle: nil)
         viewController.viewModel = viewModel
@@ -60,7 +88,7 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(cellClass: HomeCollectionViewCell.self, indexPath: indexPath)
-        cell.configure(genre: viewModel.genres[indexPath.row])
+        cell.configure(genre: viewModel.filteredGenres[indexPath.row])
         return cell
     }
 }
@@ -70,16 +98,5 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         let width = (collectionView.frame.width - 48 - 16) / 2
         let height = width
         return CGSize(width: width, height: height)
-    }
-}
-
-extension HomeViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        (textField as! SearchField).didBeginEditingSettings()
-        hideKeyboardWhenTappedAround()
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        (textField as! SearchField).didEndEditingSettings()
     }
 }

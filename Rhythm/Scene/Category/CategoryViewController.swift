@@ -42,6 +42,15 @@ extension CategoryViewController: UITextFieldDelegate {
         return true
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        (textField as! SearchField).didBeginEditingSettings()
+        hideKeyboardWhenTappedAround()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        (textField as! SearchField).didEndEditingSettings()
+    }
+    
 }
 
 extension CategoryViewController: CategoryViewModelDelegate {
@@ -71,7 +80,7 @@ extension CategoryViewController: CategoryViewModelDelegate {
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedArtist = viewModel.artists[indexPath.row]
+        let selectedArtist = viewModel.filteredArtists[indexPath.row]
         let viewModel = ArtistViewModel(artistId: selectedArtist.id)
         let viewController = ArtistViewController(nibName: "ArtistViewController", bundle: nil)
         viewController.viewModel = viewModel

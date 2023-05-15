@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wXZ-1d-SrM">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -143,13 +144,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ry0-Yi-zEO">
-                                <rect key="frame" x="0.0" y="44" width="393" height="142"/>
+                                <rect key="frame" x="0.0" y="44" width="393" height="145"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pn7-jc-i7f">
-                                        <rect key="frame" x="24" y="0.0" width="345" height="42"/>
+                                        <rect key="frame" x="24" y="0.0" width="345" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greeting Message," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjb-12-y1B">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="23.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="25"/>
                                                 <fontDescription key="fontDescription" name="Satoshi-Bold" family="Satoshi" pointSize="20"/>
                                                 <color key="textColor" name="text.primary"/>
                                                 <nil key="highlightedColor"/>
@@ -161,7 +162,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore new songs!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsh-hZ-c3K">
-                                                <rect key="frame" x="0.0" y="23.333333333333329" width="345" height="18.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="25" width="345" height="20"/>
                                                 <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="16"/>
                                                 <color key="textColor" name="text.secondry"/>
                                                 <nil key="highlightedColor"/>
@@ -173,7 +174,7 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search album or artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41u-eK-3Oi" customClass="SearchField" customModule="Rhythm" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="66" width="345" height="52"/>
+                                        <rect key="frame" x="24" y="69" width="345" height="52"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" name="main.primary"/>
                                         <constraints>
@@ -193,7 +194,7 @@
                                 <edgeInsets key="layoutMargins" top="0.0" left="24" bottom="24" right="24"/>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OZ4-HK-uXo">
-                                <rect key="frame" x="0.0" y="186" width="393" height="617"/>
+                                <rect key="frame" x="0.0" y="189" width="393" height="614"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="IHE-XQ-R2W">
                                     <size key="itemSize" width="155" height="155"/>
@@ -299,7 +300,7 @@
     </scenes>
     <designables>
         <designable name="41u-eK-3Oi">
-            <size key="intrinsicContentSize" width="185.66666666666666" height="34"/>
+            <size key="intrinsicContentSize" width="186.66666666666666" height="34"/>
         </designable>
     </designables>
     <resources>

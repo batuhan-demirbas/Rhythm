@@ -11,7 +11,8 @@
 "home_title_afternoon" = "İyi Akşamlar,";
 "home_title_night" = "İyi Geceler,";
 "home_description" = "Yeni şarkıları keşfedin!";
-"home_search_placeholder" = "Sanatçı ara...";
+"home_search_placeholder" = "Kategori ara...";
+"category_search_placeholder" = "Sanatçı ara...";
 "artist_followers" = " takipçi";
 "artist_collectionview_title" = "Albümler";
 "favroite_title" = "Favori Şarkılar";
