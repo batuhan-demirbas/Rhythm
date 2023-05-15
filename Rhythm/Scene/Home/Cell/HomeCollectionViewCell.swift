@@ -8,10 +8,10 @@
 import UIKit
 import SkeletonView
 
-class HomeCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private var imageView: UIImageView!
-    @IBOutlet private var label: UILabel!
-        
+final class HomeCollectionViewCell: UICollectionViewCell {
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var label: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

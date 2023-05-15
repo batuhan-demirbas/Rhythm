@@ -9,6 +9,7 @@ import UIKit
 
 final class CategoryViewController: BaseViewController {
     
+    @IBOutlet private weak var searchField: SearchField!
     @IBOutlet private weak var collectionView: UICollectionView!
     
     var viewModel: CategoryViewModel! {
@@ -20,6 +21,25 @@ final class CategoryViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.load()
+        searchField.delegate = self
+    }
+    
+}
+
+extension CategoryViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let searchText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
+            viewModel.filterArtist(searchText: searchText)
+        }
+        
+        collectionView.reloadData()
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        viewModel.filteredArtists = viewModel.artists
+        collectionView.reloadData()
+        return true
     }
     
 }
@@ -52,22 +72,23 @@ extension CategoryViewController: CategoryViewModelDelegate {
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedArtist = viewModel.artists[indexPath.row]
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         let viewModel = ArtistViewModel(artistId: selectedArtist.id)
         let viewController = ArtistViewController(nibName: "ArtistViewController", bundle: nil)
         viewController.viewModel = viewModel
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
 extension CategoryViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(cellClass: CategoryCollectionViewCell.self, indexPath: indexPath)
-        cell.artist = viewModel.artists[indexPath.row]
+        cell.artist = viewModel.filteredArtists[indexPath.row]
         cell.configure()
         return cell
     }

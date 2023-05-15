@@ -8,10 +8,10 @@
 import UIKit
 
 final class ArtistCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private var imageView: UIImageView!
-    @IBOutlet private var nameLabel: UILabel!
-    @IBOutlet private var yearLabel: UILabel!
-        
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var yearLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

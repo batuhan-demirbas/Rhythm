@@ -8,8 +8,8 @@
 import UIKit
 
 final class CategoryCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private var imageView: UIImageView!
-    @IBOutlet private var label: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var label: UILabel!
     
     var artist: ArtistsDatum?
     

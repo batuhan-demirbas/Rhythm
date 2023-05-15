@@ -11,10 +11,10 @@ import UIKit
 
 final class CoreDataManager {
     static let shared = CoreDataManager()
-
+    
     private var appDelegate: AppDelegate
     private var context: NSManagedObjectContext
-
+    
     private init() {
         appDelegate = UIApplication.shared.delegate as! AppDelegate
         context = appDelegate.persistentContainer.viewContext
@@ -28,14 +28,14 @@ final class CoreDataManager {
         newFavorite.image = image
         newFavorite.link = link
         newFavorite.duration = Int16(duration)
-
+        
         do {
             try context.save()
         } catch {
             print("Bir hata oluştu: \(error)")
         }
     }
-
+    
     func fetchFavorites() -> [Favorites] {
         let fetchRequest = NSFetchRequest<Favorites>(entityName: "Favorites")
         do {
@@ -46,7 +46,7 @@ final class CoreDataManager {
             return []
         }
     }
-
+    
     func deleteFavorite(favorite: Favorites) {
         context.delete(favorite)
         do {

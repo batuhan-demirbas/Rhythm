@@ -8,9 +8,9 @@
 import UIKit
 
 final class FavoriteViewController: BaseViewController {
-    @IBOutlet private var label: UILabel!
-    @IBOutlet private var collectionView: UICollectionView!
-    @IBOutlet private var audioPlayerView: AudioPlayerView!
+    @IBOutlet private weak var label: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var audioPlayerView: AudioPlayerView!
     
     let audioPlayer = AudioPlayer()
     
@@ -58,11 +58,7 @@ extension FavoriteViewController: UICollectionViewDelegate {
         if let url = URL(string: selectedTrack.link ?? "") {
             audioPlayer.playAudio(from: url)
             updateTabBarView(isTopLineVisible: false)
-            audioPlayerView.imageView.loadImage(from: selectedTrack.image ?? "")
-            audioPlayerView.trackLabel.text = selectedTrack.trackName
-            audioPlayerView.artistLabel.text = selectedTrack.artistName
-            audioPlayerView.isHidden = false
-            audioPlayerView.playIcon.image = UIImage(named: "pause")
+            audioPlayerView.configure(Selected: selectedTrack)
         }
     }
 }

@@ -21,17 +21,13 @@ protocol HomeViewModelProtocol {
 }
 
 final class HomeViewModel {
-    let manager = DeezerManager.shared
+    let networkManager = DeezerManager.shared
     weak var delegate: HomeViewModelDelegate?
     var genres: [GenreDatum] = []
     
     init(genres: [GenreDatum]) {
         self.genres = genres
     }
-    
-    var isLoading: Bool = false
-    var errorCallback: ((String) -> Void)?
-    var successCallback: (() -> Void)?
     
 }
 

@@ -12,10 +12,10 @@ protocol FavoritesCollectionViewCellDelegate: AnyObject {
 }
 
 final class FavoritesCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private var imageView: UIImageView!
-    @IBOutlet private var nameLabel: UILabel!
-    @IBOutlet private var durationLabel: UILabel!
-    @IBOutlet private var iconImageView: UIImageView!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var durationLabel: UILabel!
+    @IBOutlet private weak var iconImageView: UIImageView!
     
     weak var delegate: FavoritesCollectionViewCellDelegate?
     var track: Favorites?

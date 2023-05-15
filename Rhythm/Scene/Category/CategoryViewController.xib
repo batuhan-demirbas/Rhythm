@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="Rhythm" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="hDA-CA-jge" id="LCW-MU-ea1"/>
+                <outlet property="searchField" destination="Y77-Bg-ATV" id="dgs-Sy-nTv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hDA-CA-jge">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <rect key="frame" x="0.0" y="144" width="393" height="708"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="ryu-br-pPM">
                         <size key="itemSize" width="155" height="155"/>
@@ -31,23 +32,37 @@
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="24" minY="16" maxX="24" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="sde-cm-jBX"/>
                         <outlet property="delegate" destination="-1" id="ANE-M4-Lho"/>
                     </connections>
                 </collectionView>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y77-Bg-ATV" customClass="SearchField" customModule="Rhythm" customModuleProvider="target">
+                    <rect key="frame" x="24" y="75" width="345" height="53"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="nNe-31-BuP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Y77-Bg-ATV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="4Hn-YO-9Um"/>
                 <constraint firstAttribute="bottom" secondItem="KGG-z5-L8N" secondAttribute="bottom" id="SlE-Gr-V4A"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hDA-CA-jge" secondAttribute="trailing" id="YcW-au-BCq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KGG-z5-L8N" secondAttribute="trailing" id="aME-CW-8q2"/>
                 <constraint firstAttribute="bottom" secondItem="hDA-CA-jge" secondAttribute="bottom" id="dAo-6J-tt3"/>
+                <constraint firstItem="Y77-Bg-ATV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="nQl-DI-Rv5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y77-Bg-ATV" secondAttribute="trailing" constant="24" id="nuH-D3-iIr"/>
                 <constraint firstItem="KGG-z5-L8N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pls-Ef-jKd"/>
                 <constraint firstItem="hDA-CA-jge" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="twt-EV-Dff"/>
                 <constraint firstItem="KGG-z5-L8N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="y9O-ec-1TJ"/>
-                <constraint firstItem="hDA-CA-jge" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zn5-xy-pbg"/>
+                <constraint firstItem="hDA-CA-jge" firstAttribute="top" secondItem="Y77-Bg-ATV" secondAttribute="bottom" constant="16" id="zn5-xy-pbg"/>
             </constraints>
             <point key="canvasLocation" x="140" y="20"/>
         </view>

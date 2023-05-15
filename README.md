@@ -17,7 +17,7 @@ Rhythm, Swift ve UIKit kullanarak geliştirdiğim, Deezer API'sine dayanan bir m
 - Minimum iOS Sürümü: 14.0
 - Mimari: **MVVM**
 - Bağımlılık Yöneticisi: Swift Package Manager
-- Kütüphaneler: **Alamofire, CoreData, AVFoundation, Kingfisher, SkeletonView**
+- Kütüphaneler: **Alamofire, CoreData, AVFoundation, Kingfisher**
 
 ## Proje Yönetimi
 Rhythm projesinin her aşaması, geliştirme sürecinden tasarıma kadar, Notion üzerinden yönetildi. Bu süreçte, uygulamanın teknik yönlerinin yanı sıra marka değerini ve kullanıcı deneyimi de göz önünde bulunduruldu. Tüm süreç, başından sonuna kadar Notion'da planlandı.

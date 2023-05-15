@@ -12,7 +12,6 @@ protocol AlbumCollectionViewCellDelegate: AnyObject {
 }
 
 final class AlbumCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet private weak var trackNameLabel: UILabel!
     @IBOutlet private weak var trackDuration: UILabel!
     @IBOutlet private weak var favIcon: UIImageView!

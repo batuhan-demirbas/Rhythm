@@ -8,9 +8,9 @@
 import UIKit
 
 final class HomeViewController: BaseViewController {
-    @IBOutlet private var messageLabel: UILabel!
-    @IBOutlet private var searchField: UITextField!
-    @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private weak var searchField: UITextField!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     var viewModel: HomeViewModelProtocol! {
         didSet {
@@ -29,7 +29,6 @@ final class HomeViewController: BaseViewController {
 extension HomeViewController: HomeViewModelDelegate {
     func prepareViews() {
         messageLabel.text = GreetingManager.getGreetingMessage()
-        
     }
     
     func prepareCollectionView() {

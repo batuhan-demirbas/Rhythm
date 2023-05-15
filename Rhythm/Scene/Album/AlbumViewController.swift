@@ -8,7 +8,6 @@
 import UIKit
 
 final class AlbumViewController: BaseViewController {
-    
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var albumNameLabel: UILabel!
     @IBOutlet private weak var albumDescriptionLabel: UILabel!
@@ -38,7 +37,7 @@ extension AlbumViewController: AlbumViewModelDelegate {
         albumDescriptionLabel.text = "\(viewModel.artistName) • \(viewModel.numberOfItems) " + "favroite_subtitle"~
         albumNameLabel.text = viewModel.title
         NotificationCenter.default.addObserver(self, selector: #selector(songDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
-
+        
     }
     
     func prepareCollectionView() {
@@ -57,12 +56,9 @@ extension AlbumViewController: UICollectionViewDelegate {
         let selectedTrack = viewModel.getTrack(indexPath: indexPath)
         if let url = URL(string: selectedTrack.preview ) {
             audioPlayer.playAudio(from: url)
-            audioPlayerView.imageView.loadImage(from: selectedTrack.album.coverBig )
-            audioPlayerView.trackLabel.text = selectedTrack.title
-            audioPlayerView.artistLabel.text = selectedTrack.artist.name
-            audioPlayerView.isHidden = false
-            audioPlayerView.playIcon.image = UIImage(named: "pause")
+            audioPlayerView.configure(Selected: selectedTrack)
         }
+        
     }
 }
 

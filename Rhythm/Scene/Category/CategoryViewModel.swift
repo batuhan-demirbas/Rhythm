@@ -26,14 +26,13 @@ final class CategoryViewModel {
     weak var delegate: CategoryViewModelDelegate?
     private let genre: GenreDatum?
     var artists: [ArtistsDatum] = []
+    var filteredArtists: [ArtistsDatum] = []
     
     init(genre: GenreDatum) {
         self.genre = genre
     }
     
-    var isLoading: Bool = false
     var errorCallback: ((String) -> Void)?
-    var successCallback: (() -> Void)?
     
     private func fetchArtists(genreId: Int) {
         manager.getArtists(genreId: genreId) { [weak self] result, error in
@@ -42,8 +41,8 @@ final class CategoryViewModel {
                 self?.errorCallback?(error.localizedDescription)
             } else {
                 self?.artists = result.data
+                self?.filteredArtists = result.data
                 self?.delegate?.reloadData()
-                self?.successCallback?()
             }
         }
     }
@@ -51,8 +50,9 @@ final class CategoryViewModel {
 }
 
 extension CategoryViewModel: CategoryViewModelProtocol {
+    
     var numberOfItems: Int {
-        artists.count
+        filteredArtists.count
     }
     
     var genreName: String {
@@ -63,5 +63,13 @@ extension CategoryViewModel: CategoryViewModelProtocol {
         delegate?.prepareViews()
         delegate?.prepareCollectionView()
         fetchArtists(genreId: genre?.id ?? 0)
+    }
+    
+    func filterArtist(searchText: String) {
+        if searchText != "" {
+            filteredArtists = artists.filter({ $0.name.lowercased().contains(searchText.lowercased()) == true })
+        } else {
+            filteredArtists = artists
+        }
     }
 }

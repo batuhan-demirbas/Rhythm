@@ -7,9 +7,9 @@
 
 import AVFoundation
 
-class AudioPlayer {
+final class AudioPlayer {
     var player: AVPlayer?
-
+    
     func playAudio(from url: URL) {
         let playerItem = AVPlayerItem(url: url)
         player = AVPlayer(playerItem: playerItem)

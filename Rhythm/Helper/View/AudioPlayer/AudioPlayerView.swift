@@ -15,12 +15,12 @@ protocol AudioPlayerViewDelegate: AnyObject {
 class AudioPlayerView: UIView {
     
     let kCONTENT_XIB_NAME = "AudioPlayerView"
-    @IBOutlet private var contentView: UIView!
-    @IBOutlet private var background: UIImageView!
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var trackLabel: UILabel!
-    @IBOutlet var artistLabel: UILabel!
-    @IBOutlet var playIcon: UIImageView!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var background: UIImageView!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var trackLabel: UILabel!
+    @IBOutlet private weak var artistLabel: UILabel!
+    @IBOutlet private weak var playIcon: UIImageView!
     
     weak var delegate: AudioPlayerViewDelegate?
     var buttonState = true
@@ -53,6 +53,24 @@ class AudioPlayerView: UIView {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapPlayButton))
         playIcon.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    func configure(Selected track: TracksDatum) {
+        self.imageView.loadImage(from: track.album.coverBig )
+        self.trackLabel.text = track.title
+        self.artistLabel.text = track.artist.name
+        self.isHidden = false
+        self.playIcon.image = UIImage(named: "pause")
+        
+    }
+    
+    func configure(Selected track: Favorites) {
+        self.imageView.loadImage(from: track.image ?? "")
+        self.trackLabel.text = track.trackName
+        self.artistLabel.text = track.artistName
+        self.isHidden = false
+        self.playIcon.image = UIImage(named: "pause")
         
     }
     
