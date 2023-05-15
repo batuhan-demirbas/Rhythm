@@ -28,6 +28,14 @@ final class AlbumViewController: BaseViewController {
         audioPlayerView.delegate = self
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParent {
+            audioPlayer.pauseAudio()
+        }
+    }
+    
 }
 
 extension AlbumViewController: AlbumViewModelDelegate {
