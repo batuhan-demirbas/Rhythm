@@ -32,9 +32,7 @@ final class AlbumViewModel {
     var albumId: Int = 0
     var favorites: [Favorites] = []
     
-    var isLoading: Bool = false
     var errorCallback: ((String) -> Void)?
-    var successCallback: (() -> Void)?
     
     init(albumId: Int) {
         self.albumId = albumId

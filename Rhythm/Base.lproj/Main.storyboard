@@ -169,13 +169,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ry0-Yi-zEO">
-                                <rect key="frame" x="0.0" y="44" width="393" height="145"/>
+                                <rect key="frame" x="0.0" y="44" width="393" height="142"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pn7-jc-i7f">
-                                        <rect key="frame" x="24" y="0.0" width="345" height="45"/>
+                                        <rect key="frame" x="24" y="0.0" width="345" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greeting Message," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjb-12-y1B">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="23.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Satoshi-Bold" family="Satoshi" pointSize="20"/>
                                                 <color key="textColor" name="text.primary"/>
                                                 <nil key="highlightedColor"/>
@@ -187,7 +187,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore new songs!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsh-hZ-c3K">
-                                                <rect key="frame" x="0.0" y="25" width="345" height="20"/>
+                                                <rect key="frame" x="0.0" y="23.333333333333329" width="345" height="18.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="16"/>
                                                 <color key="textColor" name="text.secondry"/>
                                                 <nil key="highlightedColor"/>
@@ -199,7 +199,7 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search album or artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41u-eK-3Oi" customClass="SearchField" customModule="Rhythm" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="69" width="345" height="52"/>
+                                        <rect key="frame" x="24" y="66" width="345" height="52"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" name="main.primary"/>
                                         <constraints>
@@ -219,7 +219,7 @@
                                 <edgeInsets key="layoutMargins" top="0.0" left="24" bottom="24" right="24"/>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OZ4-HK-uXo">
-                                <rect key="frame" x="0.0" y="189" width="393" height="614"/>
+                                <rect key="frame" x="0.0" y="186" width="393" height="617"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="IHE-XQ-R2W">
                                     <size key="itemSize" width="155" height="155"/>
@@ -234,17 +234,17 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="teI-hi-6u7">
-                                <rect key="frame" x="115.33333333333333" y="376.33333333333331" width="162.66666666666669" height="99.666666666666686"/>
+                                <rect key="frame" x="115.66666666666667" y="377" width="161.66666666666663" height="98.333333333333314"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notfound" translatesAutoresizingMaskIntoConstraints="NO" id="dCp-Mg-PQR">
-                                        <rect key="frame" x="44.333333333333329" y="0.0" width="74" height="74"/>
+                                        <rect key="frame" x="43.999999999999986" y="0.0" width="74" height="74"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="74" id="TQA-va-0w0"/>
                                             <constraint firstAttribute="height" constant="74" id="XO5-D6-JUs"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results found for “key”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="man-jL-qhC">
-                                        <rect key="frame" x="0.0" y="82" width="162.66666666666666" height="17.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="82" width="161.66666666666666" height="16.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="14"/>
                                         <color key="textColor" name="text.secondry"/>
                                         <nil key="highlightedColor"/>
@@ -348,11 +348,6 @@
             <point key="canvasLocation" x="-1403" y="-345"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="41u-eK-3Oi">
-            <size key="intrinsicContentSize" width="186.66666666666666" height="34"/>
-        </designable>
-    </designables>
     <resources>
         <image name="background" width="375" height="812"/>
         <image name="favorites" width="32" height="32"/>

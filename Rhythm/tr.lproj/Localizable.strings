@@ -19,3 +19,6 @@
 "favroite_title" = "Favori Şarkılar";
 "favroite_subtitle" = " Şarkı";
 "favorite_notfound_label" = "Henüz favori şarkı yok. Eklemeye başlayın!";
+"alert_description" = "Favorilerden çıkarmayı onaylıyor musun?";
+"alert_cancel" = "İptal";
+"alert_remove" = "Çıkar";

@@ -88,10 +88,22 @@ extension FavoriteViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension FavoriteViewController: FavoritesCollectionViewCellDelegate {
-    func didTapIconInCell(_ cell: FavoritesCollectionViewCell) {
-        viewModel.load()
-        label.text = "\(viewModel.numberOfItems) songs"
-        collectionView.reloadData()
+    func didTapIconInCell(_ cell: FavoritesCollectionViewCell, track: Favorites) {
+        
+        let alert = UIAlertController(title: "alert_description"~, message: nil , preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "alert_remove"~, style: .default) { _ in
+            let manager = CoreDataManager.shared
+            manager.deleteFavorite(favorite: track)
+            self.viewModel.load()
+            self.label.text = "\(self.viewModel.numberOfItems) songs"
+            self.collectionView.reloadData()
+        })
+        
+        alert.addAction(UIAlertAction(title: "alert_cancel"~, style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+        
     }
     
 }

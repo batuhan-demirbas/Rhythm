@@ -30,9 +30,7 @@ final class ArtistViewModel {
     var albums: [Datum] = []
     var artistId: Int = 0
     
-    var isLoading: Bool = false
     var errorCallback: ((String) -> Void)?
-    var successCallback: (() -> Void)?
     
     init(artistId: Int) {
         self.artistId = artistId

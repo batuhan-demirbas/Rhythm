@@ -23,9 +23,7 @@ final class SplashViewModel {
     weak var delegate: SplashViewModelDelegate?
     var genres: [GenreDatum] = []
     
-    var isLoading: Bool = false
     var errorCallback: ((String) -> Void)?
-    var successCallback: (() -> Void)?
     
     private func fetchGenres() {
         manager.getGenres { [weak self] result, error in
@@ -35,7 +33,6 @@ final class SplashViewModel {
             } else {
                 self?.genres = result.data
                 self?.delegate?.showHome()
-                self?.successCallback?()
             }
         }
     }

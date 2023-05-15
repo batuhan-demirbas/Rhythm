@@ -19,4 +19,7 @@
 "favroite_title" = "Favorite Songs";
 "favroite_subtitle" = " Songs";
 "favorite_notfound_label" = "No favorites yet. Start adding some!";
+"alert_description" = "Confirm removal from favourites?";
+"alert_cancel" = "Cancel";
+"alert_remove" = "Remove";
 

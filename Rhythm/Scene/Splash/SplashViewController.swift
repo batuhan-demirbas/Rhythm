@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SplashViewController: UIViewController {
+final class SplashViewController: BaseViewController {
     
     var viewModel: SplashViewModelProtocol! {
         didSet {
@@ -19,7 +19,7 @@ final class SplashViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         viewModel = SplashViewModel()
-        viewModel.load()
+        self.viewModel.load()
         
     }
     
@@ -33,6 +33,8 @@ final class SplashViewController: UIViewController {
             }
         }
     }
+    
+    
     
 }
 

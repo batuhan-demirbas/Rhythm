@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FavoritesCollectionViewCellDelegate: AnyObject {
-    func didTapIconInCell(_ cell: FavoritesCollectionViewCell)
+    func didTapIconInCell(_ cell: FavoritesCollectionViewCell, track: Favorites)
 }
 
 final class FavoritesCollectionViewCell: UICollectionViewCell {
@@ -42,10 +42,8 @@ final class FavoritesCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func didTapIcon() {
-        let manager = CoreDataManager.shared
-        manager.deleteFavorite(favorite: track!)
-        delegate?.didTapIconInCell(self)
-        
+        guard let track = track else { return }
+        self.delegate?.didTapIconInCell(self, track: track)
     }
     
 }
