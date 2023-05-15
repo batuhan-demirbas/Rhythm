@@ -11,6 +11,7 @@ final class FavoriteViewController: BaseViewController {
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var audioPlayerView: AudioPlayerView!
+    @IBOutlet private weak var notFoundStackView: UIStackView!
     
     let audioPlayer = AudioPlayer()
     
@@ -65,7 +66,8 @@ extension FavoriteViewController: UICollectionViewDelegate {
 
 extension FavoriteViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.numberOfItems
+        notFoundStackView.isHidden = viewModel.numberOfItems != 0
+        return viewModel.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

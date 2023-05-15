@@ -99,11 +99,34 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gf4-Cx-ixx">
+                                <rect key="frame" x="84.333333333333329" y="376.33333333333331" width="224.66666666666669" height="99.666666666666686"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notfound" translatesAutoresizingMaskIntoConstraints="NO" id="RzU-eU-RRU">
+                                        <rect key="frame" x="75.333333333333329" y="0.0" width="73.999999999999986" height="74"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="N8f-oG-96e"/>
+                                            <constraint firstAttribute="height" constant="74" id="d0J-zH-DzU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favorites yet. Start adding some!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LC-Zy-jSf">
+                                        <rect key="frame" x="0.0" y="82" width="224.66666666666666" height="17.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="14"/>
+                                        <color key="textColor" name="text.secondry"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="b2_medium"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="favorite_notfound_label"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sC9-ci-MF0"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="6gg-un-7vj" firstAttribute="trailing" secondItem="sC9-ci-MF0" secondAttribute="trailing" id="0Sb-aL-SyD"/>
+                            <constraint firstItem="Gf4-Cx-ixx" firstAttribute="centerY" secondItem="7pi-6R-csT" secondAttribute="centerY" id="5IW-Ge-Vrq"/>
                             <constraint firstItem="sC9-ci-MF0" firstAttribute="trailing" secondItem="EhX-ri-1mn" secondAttribute="trailing" id="5bK-13-zXd"/>
                             <constraint firstItem="M15-Fc-U8B" firstAttribute="top" secondItem="sC9-ci-MF0" secondAttribute="top" id="5g8-ag-7Fr"/>
                             <constraint firstItem="6gg-un-7vj" firstAttribute="leading" secondItem="sC9-ci-MF0" secondAttribute="leading" id="C8S-9N-Fg6"/>
@@ -113,6 +136,7 @@
                             <constraint firstItem="sC9-ci-MF0" firstAttribute="bottom" secondItem="EjV-PV-pua" secondAttribute="bottom" id="RVf-nS-EHz"/>
                             <constraint firstItem="sC9-ci-MF0" firstAttribute="trailing" secondItem="EjV-PV-pua" secondAttribute="trailing" id="Ya6-41-PpT"/>
                             <constraint firstItem="EhX-ri-1mn" firstAttribute="leading" secondItem="sC9-ci-MF0" secondAttribute="leading" id="ZBq-oF-9XX"/>
+                            <constraint firstItem="Gf4-Cx-ixx" firstAttribute="centerX" secondItem="7pi-6R-csT" secondAttribute="centerX" id="gIo-tM-KAO"/>
                             <constraint firstItem="EjV-PV-pua" firstAttribute="leading" secondItem="sC9-ci-MF0" secondAttribute="leading" id="kGt-tm-pM4"/>
                             <constraint firstAttribute="bottom" secondItem="6gg-un-7vj" secondAttribute="bottom" id="p4K-Ce-8uR"/>
                             <constraint firstItem="sC9-ci-MF0" firstAttribute="trailing" secondItem="M15-Fc-U8B" secondAttribute="trailing" constant="24" id="tfT-Af-wpk"/>
@@ -126,6 +150,7 @@
                         <outlet property="audioPlayerView" destination="EjV-PV-pua" id="oJ1-fM-cn3"/>
                         <outlet property="collectionView" destination="EhX-ri-1mn" id="FaQ-qt-9ch"/>
                         <outlet property="label" destination="sXp-mz-D6I" id="DAa-ZO-mKT"/>
+                        <outlet property="notFoundStackView" destination="Gf4-Cx-ixx" id="2fh-hD-W7F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcn-FN-C8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -208,12 +233,34 @@
                                     <outlet property="delegate" destination="8fV-dJ-m8w" id="2az-9X-5Q3"/>
                                 </connections>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="teI-hi-6u7">
+                                <rect key="frame" x="115.33333333333333" y="376.33333333333331" width="162.66666666666669" height="99.666666666666686"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notfound" translatesAutoresizingMaskIntoConstraints="NO" id="dCp-Mg-PQR">
+                                        <rect key="frame" x="44.333333333333329" y="0.0" width="74" height="74"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="TQA-va-0w0"/>
+                                            <constraint firstAttribute="height" constant="74" id="XO5-D6-JUs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results found for “key”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="man-jL-qhC">
+                                        <rect key="frame" x="0.0" y="82" width="162.66666666666666" height="17.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="14"/>
+                                        <color key="textColor" name="text.secondry"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="b2_medium"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="llQ-Lm-5ju"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="ry0-Yi-zEO" firstAttribute="top" secondItem="llQ-Lm-5ju" secondAttribute="top" id="0cO-p8-DQW"/>
                             <constraint firstItem="nAJ-P5-uys" firstAttribute="top" secondItem="So7-pK-13B" secondAttribute="top" id="4ez-cT-pwQ"/>
+                            <constraint firstItem="teI-hi-6u7" firstAttribute="centerX" secondItem="So7-pK-13B" secondAttribute="centerX" id="6N3-tG-ejm"/>
                             <constraint firstItem="ry0-Yi-zEO" firstAttribute="leading" secondItem="llQ-Lm-5ju" secondAttribute="leading" id="HqH-s9-318"/>
                             <constraint firstItem="OZ4-HK-uXo" firstAttribute="leading" secondItem="llQ-Lm-5ju" secondAttribute="leading" id="TTZ-zU-nZB"/>
                             <constraint firstItem="llQ-Lm-5ju" firstAttribute="trailing" secondItem="ry0-Yi-zEO" secondAttribute="trailing" id="Xfs-Aa-dkS"/>
@@ -223,6 +270,7 @@
                             <constraint firstItem="OZ4-HK-uXo" firstAttribute="top" secondItem="ry0-Yi-zEO" secondAttribute="bottom" id="iwa-ZU-mRt"/>
                             <constraint firstItem="OZ4-HK-uXo" firstAttribute="trailing" secondItem="llQ-Lm-5ju" secondAttribute="trailing" id="u30-We-Enu"/>
                             <constraint firstItem="nAJ-P5-uys" firstAttribute="leading" secondItem="llQ-Lm-5ju" secondAttribute="leading" id="vqc-Kc-mFn"/>
+                            <constraint firstItem="teI-hi-6u7" firstAttribute="centerY" secondItem="So7-pK-13B" secondAttribute="centerY" id="vzM-yj-eYu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" selectedImage="home.fill" id="nDV-4w-qGe">
@@ -231,6 +279,8 @@
                     <connections>
                         <outlet property="collectionView" destination="OZ4-HK-uXo" id="oL4-O6-qnv"/>
                         <outlet property="messageLabel" destination="xjb-12-y1B" id="PfD-Fj-s12"/>
+                        <outlet property="notFoundLabel" destination="man-jL-qhC" id="L8e-CE-Zmd"/>
+                        <outlet property="notFoundStackView" destination="teI-hi-6u7" id="Bk5-0j-OOy"/>
                         <outlet property="searchField" destination="41u-eK-3Oi" id="ynV-O9-wCV"/>
                     </connections>
                 </viewController>
@@ -310,6 +360,7 @@
         <image name="home" width="32" height="32"/>
         <image name="home.fill" width="32" height="32"/>
         <image name="logo" width="123" height="41"/>
+        <image name="notfound" width="74" height="74"/>
         <image name="splash" width="375" height="812"/>
         <namedColor name="background">
             <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

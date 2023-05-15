@@ -11,6 +11,8 @@ final class HomeViewController: BaseViewController {
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var searchField: UITextField!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var notFoundStackView: UIStackView!
+    @IBOutlet private weak var notFoundLabel: UILabel!
     
     var viewModel: HomeViewModelProtocol! {
         didSet {
@@ -47,6 +49,7 @@ extension HomeViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let searchText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
             viewModel.filterGenre(searchText: searchText)
+            notFoundLabel.text = String(format: NSLocalizedString("category_notfound_label", comment: ""), searchText)
         }
         
         collectionView.reloadData()
@@ -83,7 +86,8 @@ extension HomeViewController: UICollectionViewDelegate {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.numberOfItems
+        notFoundStackView.isHidden = viewModel.numberOfItems != 0
+        return viewModel.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

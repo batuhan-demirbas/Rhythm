@@ -13,7 +13,9 @@
 "home_description" = "Yeni şarkıları keşfedin!";
 "home_search_placeholder" = "Kategori ara...";
 "category_search_placeholder" = "Sanatçı ara...";
+"category_notfound_label" = "“%@” için sonuç bulunamadı";
 "artist_followers" = " takipçi";
 "artist_collectionview_title" = "Albümler";
 "favroite_title" = "Favori Şarkılar";
 "favroite_subtitle" = " Şarkı";
+"favorite_notfound_label" = "Henüz favori şarkı yok. Eklemeye başlayın!";

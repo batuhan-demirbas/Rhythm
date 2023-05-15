@@ -11,6 +11,8 @@ final class CategoryViewController: BaseViewController {
     
     @IBOutlet private weak var searchField: SearchField!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var notFoundStackView: UIStackView!
+    @IBOutlet private weak var notFoundLabel: UILabel!
     
     var viewModel: CategoryViewModel! {
         didSet {
@@ -30,8 +32,9 @@ extension CategoryViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let searchText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
             viewModel.filterArtist(searchText: searchText)
+            notFoundLabel.text = String(format: NSLocalizedString("category_notfound_label", comment: ""), searchText)
+
         }
-        
         collectionView.reloadData()
         return true
     }
@@ -92,7 +95,8 @@ extension CategoryViewController: UICollectionViewDelegate {
 extension CategoryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.numberOfItems
+        notFoundStackView.isHidden = viewModel.numberOfItems != 0
+        return viewModel.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

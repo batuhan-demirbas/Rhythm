@@ -13,7 +13,10 @@
 "home_description" = "Explore new songs!";
 "home_search_placeholder" = "Search category...";
 "category_search_placeholder" = "Search artist...";
+"category_notfound_label" = "No results found for “%@”";
 "artist_followers" = " followers";
 "artist_collectionview_title" = "Albums";
 "favroite_title" = "Favorite Songs";
 "favroite_subtitle" = " Songs";
+"favorite_notfound_label" = "No favorites yet. Start adding some!";
+

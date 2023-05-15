@@ -4,14 +4,22 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Satoshi-Medium.otf">
+            <string>Satoshi-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="Rhythm" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="hDA-CA-jge" id="LCW-MU-ea1"/>
+                <outlet property="notFoundLabel" destination="TYd-5P-Pxy" id="fIK-W9-CV4"/>
+                <outlet property="notFoundStackView" destination="gUf-1w-bn1" id="hwF-3Z-47Y"/>
                 <outlet property="searchField" destination="Y77-Bg-ATV" id="dgs-Sy-nTv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -52,11 +60,34 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="category_search_placeholder"/>
                     </userDefinedRuntimeAttributes>
                 </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gUf-1w-bn1">
+                    <rect key="frame" x="115.33333333333333" y="376.33333333333331" width="162.66666666666669" height="99.666666666666686"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notfound" translatesAutoresizingMaskIntoConstraints="NO" id="Tk2-bl-vXd">
+                            <rect key="frame" x="44.333333333333329" y="0.0" width="74" height="74"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="74" id="6v1-oQ-lAi"/>
+                                <constraint firstAttribute="height" constant="74" id="hnh-vv-GIW"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results found for “key”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-5P-Pxy">
+                            <rect key="frame" x="0.0" y="82" width="162.66666666666666" height="17.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="14"/>
+                            <color key="textColor" name="text.secondry"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="b2_medium"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Y77-Bg-ATV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="4Hn-YO-9Um"/>
+                <constraint firstItem="gUf-1w-bn1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JKD-O9-N7i"/>
+                <constraint firstItem="gUf-1w-bn1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="PJh-Oo-Kkf"/>
                 <constraint firstAttribute="bottom" secondItem="KGG-z5-L8N" secondAttribute="bottom" id="SlE-Gr-V4A"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hDA-CA-jge" secondAttribute="trailing" id="YcW-au-BCq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KGG-z5-L8N" secondAttribute="trailing" id="aME-CW-8q2"/>
@@ -78,6 +109,10 @@
     </designables>
     <resources>
         <image name="background" width="375" height="812"/>
+        <image name="notfound" width="74" height="74"/>
+        <namedColor name="text.secondry">
+            <color red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
